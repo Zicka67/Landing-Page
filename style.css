@@ -42,6 +42,7 @@ table {
 
 .container {
     background: radial-gradient(rgb(139, 195, 245), #1294b8);
+    height: 750px;
 }
 
 /* ****************************************  HEADER  ************************************************ */
@@ -74,7 +75,7 @@ header ul {
 }
 
 nav {
-    margin-left: 200px;
+
 }
 
 nav ul{
@@ -84,6 +85,7 @@ nav ul{
 .logo-nav {
     width: 50px;
     font-size: 38px;
+    margin-left: 40px;
 }
 
 .reseaux {
@@ -103,41 +105,42 @@ nav ul{
 .right {
     width: 820px;
     /* background-color: blue; */
-    
+    margin-left: 80px;
+}
+
+article img {
+    height: 500px;
 }
 
 .left {
     width: 30%;
     display: block;
     position: relative;
-    top: -50px;
     text-align: center;
     /* background-color: brown; */
-    margin-left: -150px;
-    margin-right: 120px;
+    margin-left: -40px;
+    margin-right: 10px;
+    top: 40px;
 }
 
 .left h2 {
     color: rgb(21, 19, 19);
     font-size: 55px;
     text-align: left;
-    margin-left: 50px;
-    margin-bottom: 40px;
+    margin-left: 60px;
+    margin-bottom: 50px;
     font-weight: bold;
     letter-spacing: 0.67px;
 }
 
 .left p {
     text-align: left;
-    margin-left: 50px;
+    margin-left: 60px;
     font-size: 18px;
     letter-spacing: 0.021em;
-    margin-bottom: 35px;
+    margin-bottom: 45px;
 }
 
-.main-section input {
-    
-}
 
 .main-section form input {
     height: 50px;

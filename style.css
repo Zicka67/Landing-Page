@@ -74,9 +74,9 @@ header ul {
     line-height: 35px;
 }
 
-nav {
+/* nav {
     
-}
+} */
 
 nav ul{
     display: flex;
@@ -108,7 +108,7 @@ nav ul{
     margin-left: 80px;
 }
 
-article img {
+.main-section img {
     height: 500px;
 }
 
@@ -173,9 +173,44 @@ form input:last-child:hover {
 
 /* ****************************************  SECTION2  ************************************************ */
 
-.section2{
+.section2 {
+    height: 650px;
+}
+
+.fa-solid.fa-globe {
+    font-size: 60px;
+    color: white;
+    margin-top: 100px;
+}
+
+.fa-solid.fa-brush {
+    font-size: 60px;
+    color: white;
+    margin-top: 100px;
+}
+
+.fa-solid.fa-chess {
+    font-size: 60px;
+    color: white;
+    margin-top: 100px;
+}
+
+.section2 h4{
+    font-size: 30px;
+    margin-top: 40px;
+    color: white;
+}
+
+.section2 .square p {
     
-    
+    color: rgba(200, 237, 246, 0.815);
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
 }
 
 .titre-h3 {
@@ -215,13 +250,3 @@ form input:last-child:hover {
     margin-left: 40px;
 }
 
-.square p {
-    margin-top: -270px;
-    color: rgb(172, 230, 243);
-    font-size: 15px;
-    font-weight: 600;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    width: 350px;
-}

@@ -90,7 +90,7 @@ nav ul{
     display: flex;
 }
 
-/* ****************************************  SECTION  ************************************************ */
+/* ****************************************  SECTION 1  ************************************************ */
 
 .main-section {
     display: flex;
@@ -102,7 +102,7 @@ nav ul{
 
 .right {
     width: 820px;
-    background-color: blue;
+    /* background-color: blue; */
     
 }
 
@@ -110,9 +110,9 @@ nav ul{
     width: 30%;
     display: block;
     position: relative;
-    top: -80px;
+    top: -50px;
     text-align: center;
-    background-color: brown;
+    /* background-color: brown; */
     margin-left: -150px;
     margin-right: 120px;
 }
@@ -132,9 +132,38 @@ nav ul{
     margin-left: 50px;
     font-size: 18px;
     letter-spacing: 0.021em;
+    margin-bottom: 35px;
+}
+
+.main-section input {
     
 }
 
-.left form {
-    margin-top: 50px;
+.main-section form input {
+    height: 50px;
+    width: 80%;
+    border-radius: 45px;
+    border: none;
+    opacity: 0.7;
+    /* Enlever les bordure au clic */
+    outline: none;
+}
+
+.main-section form input:last-child {
+    cursor: pointer;
+}
+
+form input:last-child {
+    height: 40px;
+    width: 20%;
+    background-color: rgba(18,148,184,1);
+    position: relative;
+    bottom: 45px;
+    left: 29.2%;
+    color: white;
+    padding-left: 0;
+    /* Comment bouger la barre d'écriture dans le champ ? */
+}
+form input:last-child:hover {
+    opacity: 0.5;
 }

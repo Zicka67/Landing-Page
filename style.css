@@ -327,9 +327,9 @@ form input:last-child:hover {
 }
 
 
-.container-mini-icon {
+/* .container-mini-icon {
     
-}
+} */
 
 .mini-icon {
     width: 20px;
@@ -393,11 +393,37 @@ form input:last-child:hover {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    /* filter: contrast(40%); */
 }
 
-.parallax1 {
-    background-color: rgb(255, 255, 255);
-    position: relative;
-    height: 500px;
-    width: 100%;
+.text-background h1{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding-top: 150px;
 }
+
+.text-background h3{
+    color: rgba(49, 49, 49, 0.487);
+    text-align: center;
+    margin-top: 30px;
+}
+
+.section4 input {
+    display: flex;
+    outline: none;
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    border-radius: 5px;
+    padding: 15px 25px;
+    text-align: center;
+    margin: 40px auto;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.section4 input:hover {
+    cursor: pointer;
+}
+
+

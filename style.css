@@ -140,6 +140,7 @@ nav ul{
     font-size: 18px;
     letter-spacing: 0.021em;
     margin-bottom: 45px;
+    line-height: 24px;
 }
 
 
@@ -390,7 +391,7 @@ form input:last-child:hover {
 }
 
 .background-image {
-    background-image: url('Landing-page/img/parallax-contrast.png');
+    /* background-image: url('Landing-page/img/parallax-contrast.png'); */
     min-height: 500px;
     background-attachment: fixed;
     background-position: center;
@@ -494,19 +495,48 @@ form input:last-child:hover {
     margin-right: 200px;
 }
 
-/* .blog-square h3, .blog-square p {
-    display: none;
-}
-
-.blog-square img:hover + .blog-square h3 {
-    color: rgb(5, 5, 5);
-    display: block;
-} */
 
 .blog-square img {
     width: 400px;
     height: 300px;
     border-radius: 10px;
     filter: none;
+}
+
+/* ****************************************  PRICING  ************************************************ */
+
+.price-flex {
+    display: flex;
+
+}
+
+.pricing-container-right {
+    background-image: url('Landing-page/img/creativity.png');
+    background-repeat: no-repeat;
+    width: 800px;
+    height: 650px;
+    margin-bottom: 100px;
+}
+
+.pricing-container-left {
+    width: 600px;
+    height: 650px;
+    margin: 0 100px 0 250px;
+    
+}
+
+.price-center {
+    text-align: center;
+    margin-bottom: 150px;
+}
+
+.price-center h3 {
+    font-size: 25px;
+    color: rgb(45, 45, 45);
+}
+
+.price-center p {
+    font-size: 25px;
+    color: rgb(45, 45, 45);
 }
 

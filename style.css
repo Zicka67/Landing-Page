@@ -507,7 +507,7 @@ form input:last-child:hover {
 
 .price-flex {
     display: flex;
-
+    
 }
 
 .pricing-container-right {
@@ -525,6 +525,18 @@ form input:last-child:hover {
     
 }
 
+.pricing-container-left h3 {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.pricing-container-left p {
+    font-size: 15px;
+    line-height: 30px;
+    color: rgb(45, 45, 45, 0.487);
+}
+
+
 .price-center {
     text-align: center;
     margin-bottom: 150px;
@@ -533,10 +545,41 @@ form input:last-child:hover {
 .price-center h3 {
     font-size: 25px;
     color: rgb(45, 45, 45);
+    margin-bottom: 25px;
 }
 
 .price-center p {
     font-size: 25px;
-    color: rgb(45, 45, 45);
+    color: rgb(45, 45, 45, 0.487);
+    font-size: 18px;
+    line-height: 30px;
 }
 
+.flex-number {
+    display: flex;
+    text-align: left;
+    margin-top: 50px;
+}
+
+.flex-number div:nth-child(2n) {
+    margin-left: 50px;
+}
+
+
+.price-button input {
+    display: flex;
+    outline: none;
+    border: 2px solid white;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    margin: 40px;
+    margin-left: -2px;
+    font-weight: 600;
+    font-size: 15px;
+    background-color: #1294b8;
+}
+
+.price-button input:hover {
+    cursor: pointer;
+}

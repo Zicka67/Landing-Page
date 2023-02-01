@@ -627,8 +627,6 @@ form input:last-child:hover {
     color: rgb(45, 45, 45);
 }
 
-
-
 .flex {
     display: flex;
     justify-content: space-between;

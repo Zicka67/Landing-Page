@@ -375,7 +375,7 @@ form input:last-child:hover {
 
 .container-parallax{
     /* width: 100%; */
-    height: 800px;
+    height: 700px;
     
 }
 
@@ -454,5 +454,59 @@ form input:last-child:hover {
 /* ****************************************  BLOG  ************************************************ */
 
 .blog {
+    display: flex;
+    justify-content: space-around;
     margin-bottom: 250px;    
 }
+
+.blog-container {
+    width: 400px;
+    transition: 0.8s;
+    text-align: left;
+}
+
+.blog-container h3 {
+    color: rgb(45, 45, 45);
+    margin-top: 30px;
+}
+
+.blog-container p {
+    color: rgba(49, 49, 49, 0.487);
+    margin: 20px 0;
+}
+
+.blog-container a {
+    text-decoration: none;
+    color: rgb(0, 137, 164);
+    margin-top: 15px;
+}
+
+.blog-container:hover {
+    filter: brightness(50%);
+    transition: 0.8s;
+}
+
+.blog1 {
+    margin-left: 200px;
+}
+
+.blog3 {
+    margin-right: 200px;
+}
+
+/* .blog-square h3, .blog-square p {
+    display: none;
+}
+
+.blog-square img:hover + .blog-square h3 {
+    color: rgb(5, 5, 5);
+    display: block;
+} */
+
+.blog-square img {
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+    filter: none;
+}
+

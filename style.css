@@ -273,6 +273,7 @@ form input:last-child:hover {
     
 }
 
+
 .resize-img:hover {
     filter: grayscale(0%);
     transition: 0.5s;
@@ -280,6 +281,7 @@ form input:last-child:hover {
     transform: scale(1.1);
     
 }
+
 
 .team-img {
     width: 300px;
@@ -327,29 +329,25 @@ form input:last-child:hover {
 }
 
 
-/* .container-mini-icon {
-    
-} */
+.container-icon:hover {
+    cursor: pointer;
+}
 
 .mini-icon {
+    /* border-radius: 100%; */
     width: 20px;
     height: 20px;
-    border-radius: 100%; 
-    background-color: blue;   
-    display: block;
     position: relative;
-    /* margin-top: 12px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 5px 5px;
-    background-color: rgb(240, 0, 0); */
-    
-    /* visibility: hidden; */
-    /* transform: translateX(100%); */
-    /* opacity: 0; */
-    /* transition: all 0.5s; */
+    bottom: 180px;
+    left: 10px; 
+    /* transition: 0.5s; */
+    margin: 7px;
+    /* background-color: blue;   
+    display: block;
+    position: relative; */
 }
+
+
 
 
 .mini-icon:hover {
@@ -359,21 +357,16 @@ form input:last-child:hover {
 
 .mini-icon i {
     border-radius: 100%;
-    background-color: blueviolet;
+    padding: 5px 5px;
+    background-color: rgb(255, 255, 255);
+    /* background-color: blueviolet;
     display: block;
-    position: relative;
+    position: relative; */
 }
+
 
 .fa-facebook-f {
     width: 15px;
-}
-
-
-.resize-img:hover + .mini-icon {
-    visibility: visible;
-    transform: translateX(0%);
-    opacity: 1; 
-    transition: all 0.5s;
 }
 
 
@@ -382,7 +375,7 @@ form input:last-child:hover {
 
 .container-parallax{
     /* width: 100%; */
-    height: 1600px;
+    height: 800px;
     
 }
 
@@ -393,13 +386,27 @@ form input:last-child:hover {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    /* filter: contrast(40%); */
+    /* filter: brightness(50%); */
 }
+
+.background-image {
+    background-image: url('Landing-page/img/parallax-contrast.png');
+    min-height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* .text-background {
+    
+} */
 
 .text-background h1{
     color: rgb(255, 255, 255);
     text-align: center;
     padding-top: 150px;
+    filter: none;
 }
 
 .text-background h3{
@@ -427,3 +434,25 @@ form input:last-child:hover {
 }
 
 
+
+.div-mini-icon + .container-icon {
+    display: none;
+    /* transition: 0.5s; */
+}
+
+.div-mini-icon:hover + .container-icon {
+    display: block;
+    /* transition: 0.5s; */
+    cursor: pointer;
+}
+
+
+
+
+
+
+/* ****************************************  BLOG  ************************************************ */
+
+.blog {
+    margin-bottom: 250px;    
+}

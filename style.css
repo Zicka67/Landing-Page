@@ -268,6 +268,23 @@ form input:last-child:hover {
     width: 300px;
     height: 300px;
     border-radius: 100%;
+    filter: grayscale(100%);
+    transition: 0.5s;
+    
+}
+
+.resize-img:hover {
+    filter: grayscale(0%);
+    transition: 0.5s;
+    cursor: pointer;
+    transform: scale(1.1);
+    
+}
+
+.team-img {
+    width: 300px;
+    border-radius: 100%;
+    overflow: hidden;
 }
 
 .team-text {
@@ -276,12 +293,15 @@ form input:last-child:hover {
 
 .team-text h3 {
     margin-top: 50px;
-    font-size: 22px;
+    margin-bottom: 20px;
+    font-size: 25px;
+    line-height: 38px;
 }
 
 .team-text p {
     font-size: 15px;
     margin-bottom: 100px;
+    line-height: 25px;
 }
 
 .team-container {
@@ -289,4 +309,21 @@ form input:last-child:hover {
     justify-content: space-around;
     margin-bottom: 100px;
     text-align: center;
+}
+
+.team-margin h3 {
+    font-size: 25px;
+    color: rgb(49, 49, 49);
+    margin-top: 30px;
+}
+
+.team-margin p {
+    font-size: 15px;
+    color: rgba(49, 49, 49, 0.487);
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.mini-icon {
+    
 }

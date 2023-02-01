@@ -527,7 +527,7 @@ form input:last-child:hover {
 
 .pricing-container-left h3 {
     font-size: 20px;
-    margin-bottom: 40px;
+    margin: 40px 0;
 }
 
 .pricing-container-left p {
@@ -582,4 +582,27 @@ form input:last-child:hover {
 
 .price-button input:hover {
     cursor: pointer;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+}
+
+.card-container div:nth-child(2) {
+    margin: 0 20px;
+}
+
+.card {
+    width: 300px;
+    height: 500px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 14px 17px -6px rgba(8,155,190,0.36); 
+    box-shadow: 0px 14px 17px -6px rgba(8,155,190,0.36);
+    margin-bottom: 200px;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
 }

@@ -21,8 +21,8 @@ CREATE TABLE IF NOT EXISTS `pricing` (
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 /*!40000 ALTER TABLE `pricing` DISABLE KEYS */;
-INSERT INTO `pricing` (`id`, `name`, `price`, `bandwidth`, `onlinespace`, `support`, `domaine`, `fees`) VALUES
-	(1, 'starter', 99, 1, 500, 'no', '1', 'no'),
+INSERT INTO `pricing` (`id`, `name`, `price`, `bandwidth`, `onlinespace`, `support`, `domain`, `fees`) VALUES
+	(1, 'starter', 9, 1, 500, 'no', '1', 'no'),
 	(2, 'advanced', 19, 2, 1, 'yes', '3', 'no'),
 	(3, 'professional', 29, 3, 2, 'yes', 'unlimited', 'no');
 /*!40000 ALTER TABLE `pricing` ENABLE KEYS */;

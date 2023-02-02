@@ -228,7 +228,7 @@ session_start();
 
     </section>
 
-    <section id="price" class="pricing">
+    <section class="pricing">
         <div class="price-flex">
             <div class="pricing-container-left">
 
@@ -255,7 +255,7 @@ session_start();
             </div>
         </div>
 
-        <div class="price-center">
+        <div id="price" class="price-center">
             <h3>Our Pricing</h3>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. A magni quo veritatis. Dolor, iure. In
                 perspiciatis eum, distinctio veniam numquam <br> tempore maiores voluptas est? Mollitia perspiciatis aut
@@ -273,38 +273,49 @@ session_start();
             
 
             <div class="card">
-                <h3><?= ucFirst($product['name']); ?></h3>
+                <h3><?= ucFirst($product['name']); ?></h3>   <!-- <?= ucFirst($product['name']); ?> = echo, ici affiche le name du product -->
                 <div class="flex-dollars">
                     <i class="fa-regular fa-dollar-sign" style="margin-top: 20px;"></i>
                     <p><span><?= ucFirst($product['price']); ?></span>/month</p>
                 </div>
                 <div class="flex-capacity">
-                    <div class="flex">
-                        <h3><i class="fa-regular fa-circle-check green"></i>Bandwidth: </h3>
-                        <h3> <?= ucFirst($product['bandwidth']); ?> Mbps</h3>
-                    </div>
-                    <div class="flex">
-                        <h3><i class="fa-regular fa-circle-check green"></i>Onlinespace: </h3>
-                        <h3><?= ucFirst($product['bandwidth']); ?></h3>
-                    </div>
+                <div class="flex">
+            <h3><i class="fa-regular fa-circle-check green"></i> Bandwidth: </h3>
+            <h3><?= ucFirst($product['bandwidth']); ?> Mbps</h3>
+                </div>
+                <div class="flex">
+            <h3><i class="fa-regular fa-circle-check green"></i> Onlinespace: </h3>
+            <h3>
+                <?php 
+                if ($product['onlinespace'] == 500) {
+                echo ucFirst($product['onlinespace']) . " MB";
+                } else {
+                echo ucFirst($product['onlinespace']) . " GB";
+                }
+                ?>
+            </h3>
+                </div>
                     <div class="flex">
                     <h3 class='offer-details-item'>
                             <?php 
-                            if ($product['support']=='Yes')
+                            if ($product['support']=='yes')
                             {echo'<i class="fa-regular fa-circle-check green"></i>';}
-                            else{echo'<i class="fa-regular fa-circle-check red" "></i>';}?>Support: </h3>
+                            else{echo'<i class="fa-regular fa-circle-check red"></i>';}?> Support: 
+                    </h3>
                         <h3><?= ucFirst($product['support']); ?></h3>
                     </div>
                     <div class="flex">
-                        <h3><i class="fa-regular fa-circle-check green"> </i>Domain</h3>
+                        <h3><i class="fa-regular fa-circle-check green"> </i> Domain: 
+                    </h3>
                         <h3><?= ucFirst($product['domain']); ?></h3>
                     </div>
                     <div class="flex">
                     <h3 class='offer-details-item'>
                             <?php 
-                            if ($product['fees']=='Yes')
+                            if ($product['fees']=='yes')
                             {echo'<i class="fa-regular fa-circle-check green"></i>';}
-                            else{echo'<i class="fa-regular fa-circle-check red";"></i>';}?>Hidden fees: </h3>
+                            else{echo'<i class="fa-regular fa-circle-check red"></i>';}?> Hidden fees: 
+                    </h3>
                         <h3><?= ucFirst($product['fees']); ?></h3>
                     </div>
                 </div>

@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS `pricing` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `price` int(11) NOT NULL DEFAULT '0',
-  `bandwitch` int(11) NOT NULL DEFAULT '0',
+  `bandwidth` int(11) NOT NULL DEFAULT '0',
   `onlinespace` int(11) NOT NULL DEFAULT '0',
   `support` varchar(50) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `domaine` varchar(50) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
@@ -21,8 +21,8 @@ CREATE TABLE IF NOT EXISTS `pricing` (
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 /*!40000 ALTER TABLE `pricing` DISABLE KEYS */;
-INSERT INTO `pricing` (`id`, `name`, `price`, `bandwitch`, `onlinespace`, `support`, `domaine`, `fees`) VALUES
-	(1, 'starter', 9, 1, 500, 'no', '1', 'no'),
+INSERT INTO `pricing` (`id`, `name`, `price`, `bandwidth`, `onlinespace`, `support`, `domaine`, `fees`) VALUES
+	(1, 'starter', 99, 1, 500, 'no', '1', 'no'),
 	(2, 'advanced', 19, 2, 1, 'yes', '3', 'no'),
 	(3, 'professional', 29, 3, 2, 'yes', 'unlimited', 'no');
 /*!40000 ALTER TABLE `pricing` ENABLE KEYS */;

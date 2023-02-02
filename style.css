@@ -452,7 +452,11 @@ form input:last-child:hover {
     margin-top: 15px;
 }
 
-.blog-container:hover {
+.blog-container img {
+    transition: 0.8s;
+}
+
+.blog-container img:hover {
     filter: brightness(50%);
     transition: 0.8s;
 }
@@ -702,7 +706,6 @@ span {
 margin: 0 auto;
 margin-top: 20px;
 justify-content: center;
-    list-style: ;
 }
 
 .barre {

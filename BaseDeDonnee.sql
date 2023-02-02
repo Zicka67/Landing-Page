@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS `pricing` (
   `bandwidth` int(11) NOT NULL DEFAULT '0',
   `onlinespace` int(11) NOT NULL DEFAULT '0',
   `support` varchar(50) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
-  `domaine` varchar(50) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
+  `domain` varchar(50) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   `fees` varchar(50) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;

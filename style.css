@@ -364,7 +364,31 @@ form input:last-child:hover {
 .container-parallax{
     /* width: 100%; */
     height: 700px;
+
+}
+
+.parallax-text {
+    margin-top: -280px;
+    margin-left: 380px;
+    position: absolute;
+    color: white;
+    text-align: center;
+}
+
+.parallax-text a {
+    text-decoration: none;
     
+    
+}
+
+.parallax-text h1 {
+font-size: 30px;
+margin-bottom: 20px;
+}
+
+.parallax-text h3 {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.51);
 }
 
 .background {

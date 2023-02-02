@@ -645,7 +645,12 @@ i .fa-regular{
 
 .flex-capacity h3 {
     margin: 10px;
+    
 }
+
+/* .flex h3 {
+    width: 120px;
+} */
 
 .green {
     color: green;

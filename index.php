@@ -285,19 +285,27 @@ session_start();
                     </div>
                     <div class="flex">
                         <h3><i class="fa-regular fa-circle-check green"></i>Onlinespace: </h3>
-                        <h3>500</h3>
+                        <h3><?= ucFirst($product['bandwidth']); ?></h3>
                     </div>
                     <div class="flex">
-                        <h3><i class="fa-regular fa-circle-check green"></i>Support:no </h3>
-                        <h3>no</h3>
+                    <h3 class='offer-details-item'>
+                            <?php 
+                            if ($product['support']=='Yes')
+                            {echo'<i class="fa-regular fa-circle-check green"></i>';}
+                            else{echo'<i class="fa-regular fa-circle-check red" "></i>';}?>Support: </h3>
+                        <h3><?= ucFirst($product['support']); ?></h3>
                     </div>
                     <div class="flex">
                         <h3><i class="fa-regular fa-circle-check green"> </i>Domain</h3>
-                        <h3>1</h3>
+                        <h3><?= ucFirst($product['domain']); ?></h3>
                     </div>
                     <div class="flex">
-                        <h3><i class="fa-regular fa-circle-check red"> </i>Hidden fees</h3>
-                        <h3>no</h3>
+                    <h3 class='offer-details-item'>
+                            <?php 
+                            if ($product['fees']=='Yes')
+                            {echo'<i class="fa-regular fa-circle-check green"></i>';}
+                            else{echo'<i class="fa-regular fa-circle-check red";"></i>';}?>Hidden fees: </h3>
+                        <h3><?= ucFirst($product['fees']); ?></h3>
                     </div>
                 </div>
                 <div class="price-button2">

@@ -262,42 +262,50 @@ session_start();
                 totam alias obcaecati!</p>
         </div>
 
-
+        
         <div class="card-container">
+            <?php //require db functions
+            require_once('db-functions.php');
+
+            $store = findAll();
+            foreach ($store as $product) {
+            ?>
+            
+
             <div class="card">
-                <h3>Starter</h3>
+                <h3><?= ucFirst($product['name']); ?></h3>
                 <div class="flex-dollars">
                     <i class="fa-regular fa-dollar-sign" style="margin-top: 20px;"></i>
-                    <p><span>9</span>/month</p>
+                    <p><span><?= ucFirst($product['price']); ?></span>/month</p>
                 </div>
                 <div class="flex-capacity">
                     <div class="flex">
-                        <h3><i class="fa-regular fa-circle-check green"> </i> dzqdzqdzqd</h3>
-                        <h3>25252</h3>
+                        <h3><i class="fa-regular fa-circle-check green"></i>Bandwidth: </h3>
+                        <h3> <?= ucFirst($product['bandwidth']); ?> Mbps</h3>
                     </div>
                     <div class="flex">
-                        <h3><i class="fa-regular fa-circle-check green"> </i> dzqdzqdzqd</h3>
-                        <h3>52525</h3>
+                        <h3><i class="fa-regular fa-circle-check green"></i>Onlinespace: </h3>
+                        <h3>500</h3>
                     </div>
                     <div class="flex">
-                        <h3><i class="fa-regular fa-circle-check red"> </i> dzqdzqdzqd</h3>
-                        <h3>5252</h3>
+                        <h3><i class="fa-regular fa-circle-check green"></i>Support:no </h3>
+                        <h3>no</h3>
                     </div>
                     <div class="flex">
-                        <h3><i class="fa-regular fa-circle-check green"> </i> dzqdzqdzqd</h3>
-                        <h3>2525</h3>
+                        <h3><i class="fa-regular fa-circle-check green"> </i>Domain</h3>
+                        <h3>1</h3>
                     </div>
                     <div class="flex">
-                        <h3><i class="fa-regular fa-circle-check red"> </i> dzqdzqdzqd</h3>
-                        <h3>25252</h3>
+                        <h3><i class="fa-regular fa-circle-check red"> </i>Hidden fees</h3>
+                        <h3>no</h3>
                     </div>
                 </div>
                 <div class="price-button2">
-                    <input type="button" value="Join Now"></input>
+                <a href="" target="_blank"><input type="button" value="Join Now"></input></a>
                 </div>
             </div>
 
-            <div class="card card2">
+            <!-- <div class="card card2">
                 <div class="promo">
                     <p>20% sale</p>
                 </div>
@@ -329,7 +337,7 @@ session_start();
                     </div>
                 </div>
                 <div class="price-button2">
-                    <input type="button" value="Join Now"></input>
+                <a href="" target="_blank"><input type="button" value="Join Now"></input></a>
                 </div>
             </div>
 
@@ -362,10 +370,11 @@ session_start();
                     </div>
                 </div>
                 <div class="price-button2">
-                    <a href="https://www.google.fr/" target="_blank"><input type="button" value="Join Now"></input></a>
+                    <a href="" target="_blank"><input type="button" value="Join Now"></input></a>
                 </div>
-            </div>
+            </div> -->
 
+            <?php } ?>
         </div>
     </section>
 

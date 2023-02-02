@@ -387,15 +387,61 @@
                     </a></div>
             </div>
             <div class="footer-copyright">
+                <button id="scrollTop">Haut de page</button>
                 <p>2022 © Kucra - Landing Page Template by Pichforest</p>
+
             </div>
         </div>
 
-
-
     </footer>
 
+    <!-- ************************************ METHODE ANIMATE DE JQUERY **************************************** -->
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  // Get the button
+  const topBtn = $("#scrollTop"); // Target le bouton
+
+  //Faire aparaitre le bouton apres 40px
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 40) {
+      topBtn.show();
+    } else {
+      topBtn.hide();
+    }
+  });
+
+    // utilise la methode animate de JS Jquery pour remonter la page
+  topBtn.click(function() {
+    $("html, body").animate({ scrollTop: 0 }, 2000);
+  });
+</script>
+
+    <!-- ************************************ METHODE SANS JQUERY **************************************** -->
+
+
+    <!-- <script>
+        
+        const topBtn = document.getElementById("topBtn"); // Target le bouton 
+      
+        
+        window.onscroll = function() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            topBtn.style.display = "block";
+          } else {
+            topBtn.style.display = "none";
+          }
+        };
+      
+  
+        topBtn.addEventListener("click", function() {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+            duration: 10000
+          });
+        });
+      </script> -->
 </body>
 
 </html>

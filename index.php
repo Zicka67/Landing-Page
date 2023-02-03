@@ -29,14 +29,13 @@ session_start();
         <header>
             <h1 class="logo-nav"><a href="#">Kucra</a></h1>
             <nav>
-                <ul>
+                <ul>    
                     <li><a href="">Home</a></li>
                     <li><a href="#features">Features</a></li>
                     <li><a href="#team">Client</a></li>
-                    <li><a href="#price">Pricing</a></li>
-                    <li><a href="#parallax">FAQ</a></li>
-                    <li><a href="#parallax">About</a></li>
                     <li><a href="#blog">Blog</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#price">Pricing</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -175,7 +174,7 @@ session_start();
     </section>
 
 
-    <Section id="#parallax" class="section4">
+    <Section class="section4">
         <div class="container-parallax">
             <div class="background" style="filter: brightness(50%);">
                 <div class="text-background"></div>
@@ -228,7 +227,7 @@ session_start();
 
     </section>
 
-    <section class="pricing">
+    <section id="about" class="pricing">
         <div class="price-flex">
             <div class="pricing-container-left">
 
@@ -298,9 +297,11 @@ session_start();
                     <div class="flex">
                     <h3 class='offer-details-item'>
                             <?php 
-                            if ($product['support']=='yes')
-                            {echo'<i class="fa-regular fa-circle-check green"></i>';}
-                            else{echo'<i class="fa-regular fa-circle-check red"></i>';}?> Support: 
+                            if ($product['support']=='yes'){
+                                echo'<i class="fa-regular fa-circle-check green"></i>';
+                            }else {
+                                echo'<i class="fa-regular fa-circle-check red"></i>';
+                                }?> Support: 
                     </h3>
                         <h3><?= ucFirst($product['support']); ?></h3>
                     </div>
@@ -312,9 +313,11 @@ session_start();
                     <div class="flex">
                     <h3 class='offer-details-item'>
                             <?php 
-                            if ($product['fees']=='yes')
-                            {echo'<i class="fa-regular fa-circle-check green"></i>';}
-                            else{echo'<i class="fa-regular fa-circle-check red"></i>';}?> Hidden fees: 
+                            if ($product['fees']=='yes'){
+                                echo'<i class="fa-regular fa-circle-check green"></i>';
+                            } else{
+                                echo'<i class="fa-regular fa-circle-check red"></i>';
+                                }?> Hidden fees: 
                     </h3>
                         <h3><?= ucFirst($product['fees']); ?></h3>
                     </div>

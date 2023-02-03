@@ -584,9 +584,11 @@ margin-bottom: 20px;
 
 .card-container {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     color: rgb(45, 45, 45);
+    margin: 0 450px;
 }
+
 
 .card-container h3{
     

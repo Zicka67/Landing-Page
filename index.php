@@ -262,7 +262,7 @@ session_start();
         </div>
 
         
-        <div class="card-container">
+        <div class="card-container">    
             <?php //require db functions
             require_once('db-functions.php');
 
@@ -323,7 +323,7 @@ session_start();
                     </div>
                 </div>
                 <div class="price-button2">
-                <a href="" target="_blank"><input type="button" value="Join Now"></input></a>
+                <a href="admin.php" target="_blank"><input type="button" value="Join Now"></input></a>
                 </div>
             </div>
 

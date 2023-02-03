@@ -95,11 +95,11 @@ function addProduct($name, $price, $bandwidth, $onlinespace, $support, $domain, 
 
 
 // Fonction pour modifier le contenu d'un produit
-function modifyProduct($name, $price, $bandwidth, $onlinespace, $support, $domain, $fees, $id)
+function modifyProduct($name, $price, $bandwidth, $onlinespace, $support, $domain, $fees, $sale, $id)
 {
     //Appel de la fonction de connexion à la base de données
     $db = dbFunction();
-    $sqlUpdate = "UPDATE pricing SET price = :price, bandwidth = :bandwidth, onlinespace = :onlinespace, support = :support, domain = :domain, fees = :fees WHERE id = :id";
+    $sqlUpdate = "UPDATE pricing SET price = :price, bandwidth = :bandwidth, onlinespace = :onlinespace, support = :support, domain = :domain, fees = :fees, sale = :sale WHERE id = :id";
     //Preparation de la requête
     $statement = $db->prepare($sqlUpdate);
 
@@ -113,7 +113,9 @@ function modifyProduct($name, $price, $bandwidth, $onlinespace, $support, $domai
             ':onlinespace' => $onlinespace,
             ':support' => $support,
             ':domain' => $domain,
-            ':fees' => $fees
+            ':fees' => $fees,
+            ':sale' => $sale
+
         ]
     );
 

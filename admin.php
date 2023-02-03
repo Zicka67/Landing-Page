@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+<?php
+session_start();
+?>
+
+
+<!DOCTYPE html> 
 <html lang="fr">
 <head>
 
@@ -22,10 +27,12 @@
     ?>
 
       <?php foreach ($store as $product) { ?>
+
 <form action="update-pricing.php" method="post">
     <div class="card-container">
       <div class="card">
         <input type="hidden" name="product_id" value="<?php echo $product['id']; ?>">
+        <input type="hidden" name="id" value="<?php echo $product['id']; ?>">
         <!-- <?php var_dump($product); ?> FONCTIONNE -->
         <h3><?php echo $product['name']; ?></h3>
         <p>Price: <input type="text" name="price" value="<?php echo $product['price']; ?>"></p>
@@ -51,7 +58,7 @@
 </body>
 
     <!-- <input type="submit" value="Update" style="position: absolute"> -->
-  </div>
-</body>
+  <!-- </div>
+</body> -->
 
 </html>

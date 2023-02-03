@@ -119,7 +119,7 @@ function modifyProduct($price, $bandwidth, $onlinespace, $support, $domain, $fee
     );
 
     // Récupération des résultats
-    $store = $statement->fetch();
-    // Return les résultats
-    return $store;
+    // $store = $statement->fetch();
+    // // Return les résultats
+    // return $store;
 }

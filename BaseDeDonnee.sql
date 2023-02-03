@@ -19,6 +19,13 @@
 CREATE DATABASE IF NOT EXISTS `landingpage` /*!40100 DEFAULT CHARACTER SET latin1 */ /*!80016 DEFAULT ENCRYPTION='N' */;
 USE `landingpage`;
 
+-- Listage de la structure de table landingpage. email
+CREATE TABLE IF NOT EXISTS `email` (
+  `email` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- Listage des données de la table landingpage.email : ~0 rows (environ)
+
 -- Listage de la structure de table landingpage. pricing
 CREATE TABLE IF NOT EXISTS `pricing` (
   `id` int NOT NULL AUTO_INCREMENT,

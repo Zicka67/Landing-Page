@@ -95,7 +95,7 @@ function addProduct($name, $price, $bandwidth, $onlinespace, $support, $domain, 
 
 
 // Fonction pour modifier le contenu d'un produit
-function modifyProduct($name, $price, $bandwidth, $onlinespace, $support, $domain, $fees, $sale, $id)
+function modifyProduct($price, $bandwidth, $onlinespace, $support, $domain, $fees, $sale, $id)
 {
     //Appel de la fonction de connexion à la base de données
     $db = dbFunction();
@@ -106,7 +106,6 @@ function modifyProduct($name, $price, $bandwidth, $onlinespace, $support, $domai
     //Execution de la requête
     $statement->execute(
         [
-            ':name' => $name,
             ':id' => $id,
             ':price' => $price,
             ':bandwidth' => $bandwidth,

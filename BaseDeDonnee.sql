@@ -26,18 +26,18 @@ CREATE TABLE IF NOT EXISTS `pricing` (
   `price` int NOT NULL DEFAULT '0',
   `bandwidth` int NOT NULL DEFAULT '0',
   `onlinespace` int NOT NULL DEFAULT '0',
-  `support` varchar(255) CHARACTER SET utf16 COLLATE utf16_bin NOT NULL,
+  `support` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_bin NOT NULL,
   `domain` varchar(255) CHARACTER SET utf8mb3 COLLATE utf8mb3_bin NOT NULL,
-  `fees` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_bin NOT NULL,
+  `fees` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_bin DEFAULT NULL,
   `sale` varchar(50) CHARACTER SET utf8mb3 COLLATE utf8mb3_bin DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
 -- Listage des données de la table landingpage.pricing : ~3 rows (environ)
 INSERT INTO `pricing` (`id`, `name`, `price`, `bandwidth`, `onlinespace`, `support`, `domain`, `fees`, `sale`) VALUES
-	(1, 'starter', 9, 1, 500, ' no', '1', 'yes', ''),
-	(2, 'advanced', 19, 2, 1, 'yes', '3', 'yes', 'yes'),
-	(3, 'professional', 29, 3, 2, 'yes', 'unlimited', 'no', '');
+	(1, 'starter', 9, 1, 500, 'no', '1', 'no', 'no'),
+	(2, 'advanced', 19, 2, 1, 'yes', '3', 'no', 'yes'),
+	(3, 'professional', 29, 3, 2, 'yes', 'unlimited', 'no', 'no');
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

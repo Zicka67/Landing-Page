@@ -55,10 +55,20 @@ session_start();
                 <p>Carefully crafted after analysing the needs of <br>different industries and the design achieves a
                     <br> great balance between purpose & prensentation</p>
 
-                <form action="post">
+                    <form action="save-email.php" method="post" id="form">
+                    <input type="text" name="email" id="email" placeholder="Enter your Email">
+                    <input type="submit" value="SUBSCRIBE">
+                    
+                    <!-- Verification -->
+                    <?php if (isset($_POST['submit'])) {
+                    // Message de verification
+                    echo "<p class='testtt'>Merci pour votre e-mail ! Nous l'avons bien reçu.</p>";
+                    } ?>
+                    </form>
+                <!-- <form action="post">
                     <input type="text" name="" id="" placeholder="  Enter your Email">
                     <input type="button" value="SUBSCRIBE">
-                </form>
+                </form> -->
             </div>
             <div class="right">
                 <img src="Landing-page\illustration.svg" alt="">

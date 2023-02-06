@@ -159,8 +159,10 @@ session_start();
                         <div class="mini-icon"><i class="fa-brands fa-skype"></i></div>
                     </div>
                 </div>
+                <div>
                 <h3>Wiliam S.Blay</h3>
                 <p>CTO/Co-Founder</p>
+                </div>
             </div>
 
 
@@ -175,8 +177,10 @@ session_start();
                         <div class="mini-icon"><i class="fa-brands fa-skype"></i></div>
                     </div>
                 </div>
+                <div>
                 <h3>Maria B. Morales</h3>
                 <p>Web Designer</p>
+                </div>
             </div>
 
             <div class="team-margin">
@@ -190,8 +194,10 @@ session_start();
                         <div class="mini-icon"><i class="fa-brands fa-skype"></i></div>
                     </div>
                 </div>
+                <div>
                 <h3>Luke L. Johnston</h3>
                 <p>Web Developer</p>
+                </div>
             </div>
 
 
@@ -359,10 +365,16 @@ session_start();
                             <h3><?= ucFirst($product['fees']); ?></h3>
                         </div>
                     </div>
-                    <div class="price-button2">
-                        <a href="admin.php" target="_blank"><input type="button" value="Join Now"></input></a>
+                    <div class="price-button2"> 
+                        <!-- POST pour soumettre le formulaire, -->
+                        <form method="post" action="addQuantity.php" class="price-button2">
+                            <input class="qtt" type="hidden" name="id" value="<?php echo $id; ?>">
+                            <input class="qtt" type="submit" value="Join Now">
+                        </form>
                     </div>
                 </div>
+
+                <a href="admin.php" target="_blank"><input type="button" value="Join Now"></input></a> 
 
                 <!-- <div class="card card2">
                 <div class="promo">

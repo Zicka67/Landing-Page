@@ -1,4 +1,8 @@
 <?php
+session_start();
+?>
+
+<?php
 
 // pour lier le fichier db-functions.php
 include 'db-functions.php';
@@ -20,11 +24,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     // Fermeture de la connexion
     $db = null;
+
+    // Message confirmation
+    $_SESSION['message'] = "Merci pour votre e-mail ! Nous l'avons bien reçu.";
+    // var_dump($_SESSION);
+
 }
 // Redirection vers la page admin.php
 header("Location: index.php");
 exit();
-?>
-
-?>
-
+ ?>

@@ -123,3 +123,27 @@ function modifyProduct($price, $bandwidth, $onlinespace, $support, $domain, $fee
     // // Return les résultats
     // return $store;
 }
+
+
+function upQtt($id) {
+    // Connexion à la bd
+    $db = dbFunction();
+
+    // Requête SQL pour récupérer un produit en fonction de son id
+    // $sqlRequest = 'SELECT * FROM pricing WHERE id= :id';
+
+    //Mise a jour
+    $sqlRequest = 'UPDATE pricing SET qtt=qtt+1 WHERE id= :id';
+
+    // Prep de la requête
+    $stmt = $db->prepare($sqlRequest);
+
+    // Exécution de la requête en passant l'identifiant en paramètre
+    $stmt->execute([':id' => $id]);
+
+    // Récupération des résultats
+    // $result = $stmt->fetch();
+
+    // // Retourne les résultats
+    // return $result;
+}

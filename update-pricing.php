@@ -27,6 +27,3 @@ modifyProduct($price, $bandwidth, $onlinespace, $support, $domain, $fee, $sale, 
 header("Location: admin.php");
 exit();
 ?>
-
-
-

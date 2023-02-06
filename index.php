@@ -15,9 +15,11 @@ session_start();
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://kit.fontawesome.com/925ee64c74.js" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
 
     <title>Landing-page</title>
 
@@ -28,7 +30,7 @@ session_start();
         <header>
             <h1 class="logo-nav"><a href="#">Kucra</a></h1>
             <nav>
-                <ul>
+                <ul>    
                     <li><a href="">Home</a></li>
                     <li><a href="#features">Features</a></li>
                     <li><a href="#team">Client</a></li>
@@ -52,30 +54,18 @@ session_start();
             <div class="left">
                 <h2>We are StartUp Creative Kucra Agency</h2>
                 <p>Carefully crafted after analysing the needs of <br>different industries and the design achieves a
-                    <br> great balance between purpose & prensentation
-                </p>
+                    <br> great balance between purpose & prensentation</p>
 
-                <form action="save-email.php" method="post" id="form">
+                    <form action="save-email.php" method="post" id="form">
                     <input type="text" name="email" id="email" placeholder="Enter your Email">
-                    <input type="submit" value="SUBSCRIBE" style="width: 20%;
-">
-
-                    <?php
-                    // var_dump($_SESSION);
-                    ?>
-
-                    <?php if (isset($_SESSION['message'])) {
-                        // Message de confirmation
-                        // var_dump($_SESSION);
-                        echo $_SESSION['message'];
-                        unset($_SESSION['message']);
-                    } else {
-                        // echo "Pas de message !";
-                    }
-                    ?>
-
-
-                </form>
+                    <input type="submit" value="SUBSCRIBE">
+                    
+                    <!-- Verification -->
+                    <?php if (isset($_POST['submit'])) {
+                    // Message de verification
+                    echo "<p class='testtt'>Merci pour votre e-mail ! Nous l'avons bien reçu.</p>";
+                    } ?>
+                    </form>
                 <!-- <form action="post">
                     <input type="text" name="" id="" placeholder="  Enter your Email">
                     <input type="button" value="SUBSCRIBE">
@@ -86,13 +76,6 @@ session_start();
             </div>
 
         </article>
-
-        <!-- Verification -->
-        <?php if (isset($_SESSION['message'])) {
-            // Message de confirmation
-            echo "<p class='testtt'>" . $_SESSION['message'] . "</p>";
-            unset($_SESSION['message']);
-        } ?>
     </div>
 
     <!-- ***************************** -->
@@ -160,10 +143,8 @@ session_start();
                         <div class="mini-icon"><i class="fa-brands fa-skype"></i></div>
                     </div>
                 </div>
-                <div>
                 <h3>Wiliam S.Blay</h3>
                 <p>CTO/Co-Founder</p>
-                </div>
             </div>
 
 
@@ -178,10 +159,8 @@ session_start();
                         <div class="mini-icon"><i class="fa-brands fa-skype"></i></div>
                     </div>
                 </div>
-                <div>
                 <h3>Maria B. Morales</h3>
                 <p>Web Designer</p>
-                </div>
             </div>
 
             <div class="team-margin">
@@ -195,10 +174,8 @@ session_start();
                         <div class="mini-icon"><i class="fa-brands fa-skype"></i></div>
                     </div>
                 </div>
-                <div>
                 <h3>Luke L. Johnston</h3>
                 <p>Web Developer</p>
-                </div>
             </div>
 
 
@@ -217,7 +194,7 @@ session_start();
                 <h1>Let's go started with Kucra</h1>
                 <h3>They are a good way to started if you want to build something similar or use from existing apps will
                     reduce the cost,<br> efforts and time of the developers.</h3>
-                <a href=""><input type="button" value="Get Started"></input></a>
+                    <a href=""><input type="button" value="Get Started"></input></a>
             </div>
 
         </div>
@@ -295,94 +272,73 @@ session_start();
                 totam alias obcaecati!</p>
         </div>
 
-
-        <div class="card-container">
+        
+        <div class="card-container">    
             <?php //require db functions
             require_once('db-functions.php');
 
             $store = findAll();
             foreach ($store as $product) {
             ?>
+            
 
-
-                <div class="card">
-                    <!-- Pour afficher la promo ou non en fonction de la DB -->
-                    <?php if ($product['sale'] == "yes") { ?>
-                        <div class="promo">
-                            <p>20% sale</p>
-                        </div>
-                    <?php } else { ?>
-                        <div class="promo" style="display:none;">
-                            <p>20% sale</p>
-                        </div>
-                    <?php } ?>
-                    <h3><?= ucFirst($product['name']); ?></h3> <!-- <?= ucFirst($product['name']); ?> = echo, ici affiche le name du product -->
-                    <div class="flex-dollars">
-                        <i class="fa-regular fa-dollar-sign" style="margin-top: 20px;"></i>
-                        <p><span><?= ucFirst($product['price']); ?></span>/month</p>
+            <div class="card">
+                <h3><?= ucFirst($product['name']); ?></h3>   <!-- <?= ucFirst($product['name']); ?> = echo, ici affiche le name du product -->
+                <div class="flex-dollars">
+                    <i class="fa-regular fa-dollar-sign" style="margin-top: 20px;"></i>
+                    <p><span><?= ucFirst($product['price']); ?></span>/month</p>
+                </div>
+                <div class="flex-capacity">
+                <div class="flex">
+            <h3><i class="fa-regular fa-circle-check green"></i> Bandwidth: </h3>
+            <h3><?= ucFirst($product['bandwidth']); ?> Mbps</h3>
+                </div>
+                <div class="flex">
+            <h3><i class="fa-regular fa-circle-check green"></i> Onlinespace: </h3>
+            <h3>
+                <?php 
+                if ($product['onlinespace'] == 500) {
+                echo ucFirst($product['onlinespace']) . " MB";
+                } else {
+                echo ucFirst($product['onlinespace']) . " GB";
+                }
+                ?>
+            </h3>
+                </div>
+                    <div class="flex">
+                    <h3 class='offer-details-item'>
+                            <?php 
+                            if ($product['support']=='yes'){
+                                echo'<i class="fa-regular fa-circle-check green"></i>';
+                            }else {
+                                echo'<i class="fa-regular fa-circle-check red"></i>';
+                                }?> Support: 
+                    </h3>
+                        <h3><?= ucFirst($product['support']); ?></h3>
                     </div>
-                    <div class="flex-capacity">
-                        <div class="flex">
-                            <h3><i class="fa-regular fa-circle-check green"></i> Bandwidth: </h3>
-                            <h3><?= ucFirst($product['bandwidth']); ?> Mbps</h3>
-                        </div>
-                        <div class="flex">
-                            <h3><i class="fa-regular fa-circle-check green"></i> Onlinespace: </h3>
-                            <h3>
-                                <?php
-                                if ($product['onlinespace'] == 500) {
-                                    echo ucFirst($product['onlinespace']) . " MB";
-                                } else {
-                                    echo ucFirst($product['onlinespace']) . " GB";
-                                }
-                                ?>
-                            </h3>
-                        </div>
-                        <div class="flex">
-                            <h3 class='offer-details-item'>
-                                <?php
-                                if ($product['support'] == 'yes') {
-                                    echo '<i class="fa-regular fa-circle-check green"></i>';
-                                } else {
-                                    echo '<i class="fa-regular fa-circle-check red"></i>';
-                                } ?> Support:
-                            </h3>
-                            <h3><?= ucFirst($product['support']); ?></h3>
-                        </div>
-                        <div class="flex">
-                            <h3><i class="fa-regular fa-circle-check green"> </i> Domain:
-                            </h3>
-                            <h3><?= ucFirst($product['domain']); ?></h3>
-                        </div>
-                        <div class="flex">
-                            <h3 class='offer-details-item'>
-                                <?php
-                                if ($product['fees'] == 'yes') {
-                                    echo '<i class="fa-regular fa-circle-check green"></i>';
-                                } else {
-                                    echo '<i class="fa-regular fa-circle-check red"></i>';
-                                } ?> Hidden fees:
-                            </h3>
-                            <h3><?= ucFirst($product['fees']); ?></h3>
-                        </div>
+                    <div class="flex">
+                        <h3><i class="fa-regular fa-circle-check green"> </i> Domain: 
+                    </h3>
+                        <h3><?= ucFirst($product['domain']); ?></h3>
                     </div>
-                    <div class="price-button2"> 
-                        <!-- POST pour soumettre le formulaire, -->
-                        <form method="post" action="addQuantity.php" class="price-button2">
-                            <input class="qtt" type="hidden" name="id" value="<?php echo $id; ?>">
-                            <input class="qtt" type="submit" value="Join Now">
-                        </form>
-
-                        <!-- <form action="addQuantity.php" method="post">
-    <input type="hidden" name="id" value="<?php echo $idOffre; ?>">
-    <button type="submit">Ajouter à l'offre</button>
-</form> -->
+                    <div class="flex">
+                    <h3 class='offer-details-item'>
+                            <?php 
+                            if ($product['fees']=='yes'){
+                                echo'<i class="fa-regular fa-circle-check green"></i>';
+                            } else{
+                                echo'<i class="fa-regular fa-circle-check red"></i>';
+                                }?> Hidden fees: 
+                    </h3>
+                        <h3><?= ucFirst($product['fees']); ?></h3>
                     </div>
                 </div>
+                <div class="price-button2">
+                <a href="admin.php" target="_blank"><input type="button" value="Join Now"></input></a>
+                </div>
+            </div>
 
-                <a href="admin.php" target="_blank"><input type="button" value="Join Now"></input></a> 
-
-                <!-- <div class="card card2">
+            <!-- <div class="card card2">
                 <div class="promo">
                     <p>20% sale</p>
                 </div>
@@ -489,26 +445,24 @@ session_start();
     <!-- ************************************ METHODE ANIMATE DE JQUERY **************************************** -->
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        // Get the button
-        const topBtn = $("#scrollTop"); // Target le bouton
+<script>
+  // Get the button
+  const topBtn = $("#scrollTop"); // Target le bouton
 
-        //Faire aparaitre le bouton apres 40px
-        $(window).scroll(function() {
-            if ($(this).scrollTop() > 40) {
-                topBtn.show();
-            } else {
-                topBtn.hide();
-            }
-        });
+  //Faire aparaitre le bouton apres 40px
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 40) {
+      topBtn.show();
+    } else {
+      topBtn.hide();
+    }
+  });
 
-        // utilise la methode animate de JS Jquery pour remonter la page
-        topBtn.click(function() {
-            $("html, body").animate({
-                scrollTop: 0
-            }, 2000);
-        });
-    </script>
+    // utilise la methode animate de JS Jquery pour remonter la page
+  topBtn.click(function() {
+    $("html, body").animate({ scrollTop: 0 }, 2000);
+  });
+</script>
 
     <!-- ************************************ METHODE SANS JQUERY **************************************** -->
 

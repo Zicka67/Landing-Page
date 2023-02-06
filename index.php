@@ -372,6 +372,11 @@ session_start();
                             <input class="qtt" type="hidden" name="id" value="<?php echo $id; ?>">
                             <input class="qtt" type="submit" value="Join Now">
                         </form>
+
+                        <!-- <form action="addQuantity.php" method="post">
+    <input type="hidden" name="id" value="<?php echo $idOffre; ?>">
+    <button type="submit">Ajouter à l'offre</button>
+</form> -->
                     </div>
                 </div>
 

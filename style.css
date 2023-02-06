@@ -160,7 +160,6 @@ nav ul{
 
 form input:last-child {
     height: 40px;
-    width: 20%;
     background-color: rgba(18,148,184,1);
     position: relative;
     bottom: 45px;
@@ -583,10 +582,12 @@ margin-bottom: 20px;
 }
 
 .card-container {
+    width: 1000px;
     display: flex;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     color: rgb(45, 45, 45);
-    margin: 0 450px;
+    margin: 0 auto;
+
 }
 
 
@@ -676,13 +677,15 @@ span {
     font-size: 40px;
 }
 
-.price-button2 input {
+/* .price-button {
     display: flex;
+} */
+
+.price-button2 input {
     outline: none;
     border: 2px solid white;
     border-radius: 5px;
     color: white;
-    padding: 10px 100px;
     margin: 40px auto;
     font-weight: 600;
     font-size: 15px;    
@@ -705,6 +708,24 @@ span {
 .promo p {
     color: white;
     line-height: 10px;
+}
+
+.price-button2 .qtt {
+    width: 85%;
+    text-align: center;
+    margin-left: -150px;
+    margin-top: 80px;
+}
+
+input .qtt{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.price-button2 .qtt value {
+    text-align: center;
 }
 
 

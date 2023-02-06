@@ -10,13 +10,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         'root',
         '',
         [
-            \PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION, //Cette option précise le type d'erreur que PDO renverra en cas de requête invalide.
-            \PDO::ATTR_DEFAULT_FETCH_MODE => \PDO::FETCH_ASSOC, //Cette définit le mode de récupération des données de la base par défaut. 
-            // Ici, PDO renverra les données sous forme de tableau associatif (FETCH_ASSOC
-            \PDO::MYSQL_ATTR_INIT_COMMAND => 'set NAMES utf8' //Cette définit le mode de récupération des données de la base par défaut. Ici, PDO 
-            // renverra les données sous forme de tableau associatif (FETCH_ASSOC).
+            \PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION,
+            \PDO::ATTR_DEFAULT_FETCH_MODE => \PDO::FETCH_ASSOC,
+            \PDO::MYSQL_ATTR_INIT_COMMAND => 'set NAMES utf8'
         ]
-
     );
 
     $db = dbFunction();
@@ -25,7 +22,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $result = upQtt($id);
 
     // Mettre à jour la quantité de l'enregistrement
-    $newQtt = $result['qtt'] + 1;
+    $newQtt = 1;
+    if ($result && array_key_exists('qtt', $result)) {
+        $newQtt = $result['qtt'] + 1;
+    }
 
     // Requête SQL pour mettre à jour la quantité
     $sqlRequest = 'UPDATE pricing SET qtt = :qtt WHERE id = :id';

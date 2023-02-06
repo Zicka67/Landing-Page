@@ -57,7 +57,8 @@ session_start();
 
                 <form action="save-email.php" method="post" id="form">
                     <input type="text" name="email" id="email" placeholder="Enter your Email">
-                    <input type="submit" value="SUBSCRIBE">
+                    <input type="submit" value="SUBSCRIBE" style="width: 20%;
+">
 
                     <?php
                     // var_dump($_SESSION);

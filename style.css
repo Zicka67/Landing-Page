@@ -672,7 +672,7 @@ form input:last-child:hover {
 /* ********************************************** */
 
 .card-container {
-    width: 100vw;
+    width: 60vw;
     display: flex;
     justify-content: space-around;
     color: rgb(45, 45, 45);
@@ -881,12 +881,13 @@ input:hover {
 
 #scrollTop {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 5vw;
+    right: 5vh;
     background-color: rgba(18,148,184,1);
-    border-radius: 5px;
+    border-radius: 100px;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 20px;
     border: none;
     cursor: pointer;
+    font-size: 3vh;
 }

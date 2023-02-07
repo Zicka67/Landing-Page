@@ -102,21 +102,23 @@ nav ul{
 }
 
 .nav-links li{
-        list-style-type: none;
-    }
+    list-style-type: none;
+}
 
 .nav-links   a{
-            text-decoration: none;
-            color: #fff;
-            font-weight: 500;
-            font-size: 1rem;
-            position: relative;
- }
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1rem;
+    position: relative;
+}
 
 #burger{
     opacity: 0;
-    color: #fff;
+    color: #fff;    
     cursor: pointer;
+    /* margin-left: 20vw;
+    padding-left: 50vw; */
 }
 
 .reseaux {
@@ -128,28 +130,27 @@ nav ul{
 
 .main-section {
     display: flex;
-    margin: 0 auto;
     justify-content: center;
     align-items: center;
-    
+    height: 90vh;
+    margin: 0 20vw;
 }
 
 .right {
-    width: 600px;
+    width: 60vw;
     margin: 50px 0 0 50px;
 }
 
 .main-section img {
-    height: 500px;
+    height: 60vh;
 }
 
 .left {
-    width: 30%;
-    display: block;
+    width: 60vw;
     text-align: center;
     /* background-color: brown; */
     margin-right: 10px;
-    margin-top: 100px;
+    margin-top: 10vh;
 }
 
 .left h2 {
@@ -160,6 +161,7 @@ nav ul{
     margin-bottom: 50px;
     font-weight: bold;
     letter-spacing: 0.67px;
+    width: 30vw;
 }
 
 .left p {
@@ -315,15 +317,6 @@ form input:last-child:hover {
 
 /* ****************************************  SECTION3  ************************************************ */
 
-.resize-img {
-    width: 300px;
-    height: 300px;
-    border-radius: 100%;
-    filter: grayscale(100%);
-    transition: 0.5s;
-    
-}
-
 .resize-img:hover {
     filter: grayscale(0%);
     transition: 0.5s;
@@ -375,24 +368,67 @@ form input:last-child:hover {
     margin-top: 10px;
     margin-bottom: 20px;
 }
+.container-icon {
+    display: flex;
+    flex-direction: column;
+    
+}
 
 .container-icon:hover {
     cursor: pointer;
 }
 
+.resize-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    filter: grayscale(100%);
+    transition: 0.5s;
+    
+}
+
 .mini-icon {
-    /* border-radius: 100%; */
+    display: none;
+    position: absolute;
+    z-index: 3;
     width: 20px;
     height: 20px;
-    position: relative;
-    bottom: 180px;
-    left: 10px; 
-    /* transition: 0.5s; */
-    margin: 7px;
-    /* background-color: blue;   
-    display: block;
-    position: relative; */
+    font-size: 18px;
+    color: black;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+    top: -30px;
+    left: -30px;
+    transform: translate(0, 0);
 }
+
+.container-icon:hover .mini-icon {
+    display: flex;
+    flex-wrap: wrap;
+    transition: all 0.5s;
+}
+
+.container-icon:hover .mini-icon:nth-child(1) {
+    top: 20px;
+    left: 20px;
+    transform: translate(0, 30px);
+}
+
+.container-icon:hover .mini-icon:nth-child(2) {
+    top: 20px;
+    left: 50px;
+    transform: translate(0, 70px);
+}
+
+.container-icon:hover .mini-icon:nth-child(3) {
+    top: 20px;
+    left: 50px;
+    transform: translate(0, 30px);
+}  
 
 
 .mini-icon:hover {
@@ -409,16 +445,12 @@ form input:last-child:hover {
     position: relative; */
 }
 
-.fa-facebook-f {
-    width: 15px;
-}
-
 /* ****************************************  SECTION4  ************************************************ */
 
 .container-parallax{
     /* width: 100%; */
     height: 700px;
-
+    
 }
 
 .parallax-text {
@@ -436,8 +468,8 @@ form input:last-child:hover {
 }
 
 .parallax-text h1 {
-font-size: 30px;
-margin-bottom: 20px;
+    font-size: 30px;
+    margin-bottom: 20px;
 }
 
 .parallax-text h3 {
@@ -645,7 +677,7 @@ margin-bottom: 20px;
     justify-content: space-around;
     color: rgb(45, 45, 45);
     margin: 0 auto;
-
+    
 }
 
 
@@ -675,7 +707,7 @@ margin-bottom: 20px;
 
 .card:nth-of-type(2) {
     margin: -25px 20px 0 20px;
-  }
+}
 
 .card h3 {
     margin-bottom: 20px;
@@ -819,9 +851,9 @@ input .qtt{
     color: white;
     display:  flex;
     width: 500px;
-margin: 0 auto;
-margin-top: 20px;
-justify-content: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    justify-content: center;
 }
 
 .barre {
@@ -831,11 +863,11 @@ justify-content: center;
 .footer-copyright {
     color: white;
     display:  flex;
-width: 500px;
-margin: 0 auto;
-margin-top: 20px;
-justify-content: center;
-
+    width: 500px;
+    margin: 0 auto;
+    margin-top: 20px;
+    justify-content: center;
+    
 }
 
 .footer a {
@@ -857,4 +889,4 @@ input:hover {
     padding: 10px 20px;
     border: none;
     cursor: pointer;
-  }
+}

@@ -54,13 +54,13 @@ session_start();
             <nav class="navbar">
                 <h1 class="logo-nav">Kucra</h1>
                 <ul class="nav-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">features</a></li>
-                    <li><a href="#">team</a></li>
-                    <li><a href="#">about</a></li>
-                    <li><a href="#">blog</a></li>
-                    <li><a href="#">client</a></li>
-                    <li><a href="#">price</a></li>
+                    <li><a href="#burger">Home</a></li>
+                    <li><a href="#features">features</a></li>
+                    <li><a href="#team">team</a></li>
+                    <li><a href="#blog">blog</a></li>
+                    <li><a href="#about">about</a></li>
+                    <!-- <li><a href="#">client</a></li> -->
+                    <li><a href="#price">price</a></li>
                     <li><a href="#">contact</a></li>
                 </ul>
                 <ul class="reseaux">

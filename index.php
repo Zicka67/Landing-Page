@@ -52,6 +52,7 @@ session_start();
             </div> -->
 
             <nav class="navbar">
+                
                 <h1 class="logo-nav">Kucra</h1>
                 <ul class="nav-links">
                     <li><a href="#burger">Home</a></li>
@@ -76,6 +77,7 @@ session_start();
         <article class="main-section">
 
             <div class="left">
+                
                 <h2>We are StartUp Creative Kucra Agency</h2>
                 <p>Carefully crafted after analysing the needs of <br>different industries and the design achieves a
                     <br> great balance between purpose & prensentation</p>
@@ -309,7 +311,7 @@ session_start();
             foreach ($store as $product) {
             ?>
             
-
+                    <!-- //promo a mettre a nouveau .. -->
             <div class="card">
                 <h3><?= ucFirst($product['name']); ?></h3>   <!-- <?= ucFirst($product['name']); ?> = echo, ici affiche le name du product -->
                 <div class="flex-dollars">
@@ -368,12 +370,18 @@ session_start();
             <?php } ?>
         </div>
     </section>
+        <div id=color>
 
-
-    </div>
+            <div class="swap-color">
+                <div class="color-button" data-theme="blue"></div>
+                <div class="color-button" data-theme="red"></div>
+                <p>Click me !</p>
+            </div>
+        </div>
 
     <footer id="contact">
         <div class="footer" style="background-color: rgb(18, 7, 0);">
+        
             <div class="footer-icon">
                 <div><a href="" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></div>
                 <div><a href="" target="_blank"><i class="fa-brands fa-twitter"></i></a></div>
@@ -395,7 +403,6 @@ session_start();
                 <button id="scrollTop"><i class="fa-solid fa-arrow-up"></i></button>
                 <p>2022 © Kucra - Landing Page Template by Pichforest</p>
 
-            </div>
         </div>
 
     </footer>
@@ -421,13 +428,39 @@ session_start();
     $("html, body").animate({ scrollTop: 0 }, 2000);
   });
 
+// ******* BURGER ******
 
-  const burger = document.getElementById('burger');
+const burger = document.getElementById('burger');
 const navLinks = document.querySelector('.nav-links');
 
 burger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
 })
+
+
+// ******* SWAP COLOR ******
+
+const themes = {
+  blue: {
+      '--container-background': 'radial-gradient(rgb(139, 195, 245), #1294b8)'
+    
+  },
+  red: {
+      '--container-background': 'radial-gradient(rgb(246, 106, 106), #ed1f1f)'
+  },
+};
+
+document.documentElement.style.setProperty('--container-background', themes.blue['--container-background']);
+
+[...document.querySelectorAll('.color-button, .large-button, .small-button, .square, .fa-solid')].forEach(el => {
+    el.addEventListener('click', () => {
+        const theme = themes[el.dataset.theme];
+        for (var variable in theme) {
+            document.documentElement.style.setProperty(variable, theme[variable]);
+        };
+    });
+});
+
 </script>
 
     <!-- ************************************ METHODE SANS JQUERY **************************************** -->

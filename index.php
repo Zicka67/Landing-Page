@@ -19,7 +19,7 @@ session_start();
         rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="responsive-tab.css">
 
     <title>Landing-page</title>
 
@@ -28,7 +28,9 @@ session_start();
 <body>
     <div class="container">
         <header>
+            <div>
             <h1 class="logo-nav"><a href="#">Kucra</a></h1>
+            </div>
             <nav>
                 <ul>    
                     <li><a href="">Home</a></li>
@@ -40,12 +42,14 @@ session_start();
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
-            <ul class="reseaux">
-                <li><a href="https://fr-fr.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-                </li>
-                <li><a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
-                <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-            </ul>
+
+            <div>
+                <ul class="reseaux">
+                    <li><a href="https://fr-fr.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                </ul>
+            </div>
 
         </header>
 
@@ -57,8 +61,8 @@ session_start();
                     <br> great balance between purpose & prensentation</p>
 
                     <form action="save-email.php" method="post" id="form">
-                    <input type="text" name="email" id="email" placeholder="Enter your Email">
-                    <input type="submit" value="SUBSCRIBE">
+                    <input class="large-button" type="text" name="email" id="email" placeholder="Enter your Email">
+                    <input class="small-button" type="submit" value="SUBSCRIBE">
                     
                     <!-- Verification -->
                     <?php if (isset($_POST['submit'])) {
@@ -128,8 +132,10 @@ session_start();
                         <div class="mini-icon"><i class="fa-brands fa-skype"></i></div>
                     </div>
                 </div>
+                <div class="margin-team-img">
                 <h3>Anna G.Wilhite</h3>
                 <p>CEO/Founder</p>
+                </div>
             </div>
 
             <div class="team-margin">
@@ -144,7 +150,7 @@ session_start();
                     </div>
                 </div>
                 <h3>Wiliam S.Blay</h3>
-                <p>CTO/Co-Founder</p>
+                <p class="margin-team-img">CTO/Co-Founder</p>
             </div>
 
 
@@ -160,7 +166,7 @@ session_start();
                     </div>
                 </div>
                 <h3>Maria B. Morales</h3>
-                <p>Web Designer</p>
+                <p class="margin-team-img">Web Designer</p>
             </div>
 
             <div class="team-margin">
@@ -175,7 +181,7 @@ session_start();
                     </div>
                 </div>
                 <h3>Luke L. Johnston</h3>
-                <p>Web Developer</p>
+                <p class="margin-team-img">Web Developer</p>
             </div>
 
 

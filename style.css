@@ -41,7 +41,9 @@ table {
 /* ****************************************  CONTAINER  ************************************************ */
 
 .container {
-    background: radial-gradient(rgb(139, 195, 245), #1294b8);
+    /* background: radial-gradient(rgb(246, 106, 106), #ed1f1f); */
+    background: var(--container-background);
+      
 }
 
 /* ****************************************  HEADER  ************************************************ */
@@ -186,6 +188,10 @@ nav ul{
     transition: 0.5s;
 } */
 
+#form {
+    margin-left: -0.5vw;
+}
+
 .large-button {
     height: 50px;
     width: 80%;
@@ -206,6 +212,7 @@ nav ul{
     /* Enlever les bordure au clic */
     outline: none;
     transition: 0.5s;
+    
 }
 
 .main-section form input:last-child {
@@ -217,7 +224,8 @@ nav ul{
 
 form input:last-child {
     height: 40px;
-    background-color: rgba(18,148,184,1);
+    /* background-color: rgba(18,148,184,1); */
+    background: var(--container-background);
     position: relative;
     bottom: 45px;
     left: 29.2%;
@@ -300,7 +308,8 @@ form input:last-child:hover {
 }
 
 .square {
-    background: radial-gradient(rgb(139, 195, 245), #1294b8);
+    /* background: radial-gradient(rgb(139, 195, 245), #1294b8); */
+    background: var(--container-background);
     width: 420px;
     height: 420px;
     text-align: center;
@@ -883,7 +892,8 @@ input:hover {
     position: fixed;
     bottom: 5vw;
     right: 5vh;
-    background-color: rgba(18,148,184,1);
+    /* background-color: rgba(18,148,184,1); */
+    background: var(--container-background);
     border-radius: 100px;
     color: white;
     padding: 12px 20px;
@@ -891,3 +901,56 @@ input:hover {
     cursor: pointer;
     font-size: 3vh;
 }
+
+
+.swap-color {
+    color: rgb(10, 10, 10);
+}
+
+.swap-color p{
+    font-size: 2vh;
+    font-weight: bold;
+}
+
+:root {
+    --primary-color: radial-gradient(rgb(139, 195, 245), #1294b8);
+    --secondary-color: radial-gradient(rgb(246, 106, 106), #ed1f1f);
+  }
+  body {
+    font-family: 'arial', 'sans serif';
+    text-align: center;
+  }
+  
+  .box {
+    display: flex;
+    background-color: var(--primary-color);
+    height: 3vw;
+    width: 3vh;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+  
+  h4 {
+    color: var(--secondary-color);
+    font-size: 5vh;
+  }
+  
+  .color-button {
+    margin: 5px;
+    display: inline-block;
+    width: 2vw;
+    height: 4vh;
+    border-radius: 100%;
+  }
+  .color-button:first-of-type { background-color: rgb(139, 195, 245); }
+  .color-button:nth-of-type(2) { background-color: rgb(246, 106, 106); }
+  .color-button:hover { cursor: pointer; }
+
+  #color {
+    position: absolute;
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+  }
+ 

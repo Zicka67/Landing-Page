@@ -147,11 +147,11 @@ session_start();
                 <h3>1499</h3>
                 <p>Complete Projects</p>
                 <div class="team-img">
-                    <img class="resize-img div-mini-icon" src="Landing-page\img\person1.png" alt="">
                     <div class="container-icon">
-                        <div class="mini-icon"><i class="fa-brands fa-facebook-f"></i></div>
-                        <div class="mini-icon"><i class="fa-brands fa-twitter"></i></div>
-                        <div class="mini-icon"><i class="fa-brands fa-skype"></i></div>
+                        <img class="resize-img div-mini-icon" src="Landing-page\img\person1.png" alt="">
+                        <a href=""></a><i class="fa-brands fa-facebook-f mini-icon"></i>
+                        <a href=""></a><i class="fa-brands fa-twitter mini-icon"></i>
+                        <a href=""></a><i class="fa-brands fa-skype mini-icon"></i>
                     </div>
                 </div>
                 <div class="margin-team-img">
@@ -164,11 +164,11 @@ session_start();
                 <h3>1080k</h3>
                 <p>Satisfied Clients</p>
                 <div class="team-img">
-                    <img class="resize-img div-mini-icon" src="Landing-page\img\person2.png" alt="">
-                    <div class="container-icon">
-                        <div class="mini-icon"><i class="fa-brands fa-facebook-f"></i></div>
-                        <div class="mini-icon"><i class="fa-brands fa-twitter"></i></div>
-                        <div class="mini-icon"><i class="fa-brands fa-skype"></i></div>
+                <div class="container-icon">
+                    <img class="resize-img div-mini-icon" src="Landing-page\img\person2.png" alt="">                
+                        <div class="mini-icon"><i class="fa-brands fa-facebook-f mini-icon"></i></div>
+                        <div class="mini-icon"><i class="fa-brands fa-twitter mini-icon"></i></div>
+                        <div class="mini-icon"><i class="fa-brands fa-skype mini-icon"></i></div>
                     </div>
                 </div>
                 <h3>Wiliam S.Blay</h3>
@@ -180,11 +180,11 @@ session_start();
                 <h3>608</h3>
                 <p>Team Members</p>
                 <div class="team-img">
-                    <img class="resize-img div-mini-icon" src="Landing-page\img\person3.png" alt="">
                     <div class="container-icon">
-                        <div class="mini-icon"><i class="fa-brands fa-facebook-f"></i></div>
-                        <div class="mini-icon"><i class="fa-brands fa-twitter"></i></div>
-                        <div class="mini-icon"><i class="fa-brands fa-skype"></i></div>
+                    <img class="resize-img div-mini-icon" src="Landing-page\img\person3.png" alt="">
+                        <div class="mini-icon"><i class="fa-brands fa-facebook-f mini-icon"></i></div>
+                        <div class="mini-icon"><i class="fa-brands fa-twitter mini-icon"></i></div>
+                        <div class="mini-icon"><i class="fa-brands fa-skype mini-icon"></i></div>
                     </div>
                 </div>
                 <h3>Maria B. Morales</h3>
@@ -195,8 +195,8 @@ session_start();
                 <h3>252</h3>
                 <p>Employee</p>
                 <div class="team-img">
-                    <img class="resize-img div-mini-icon" src="Landing-page\img\person4.png" alt="">
                     <div class="container-icon">
+                    <img class="resize-img div-mini-icon" src="Landing-page\img\person4.png" alt="">
                         <div class="mini-icon"><i class="fa-brands fa-facebook-f"></i></div>
                         <div class="mini-icon"><i class="fa-brands fa-twitter"></i></div>
                         <div class="mini-icon"><i class="fa-brands fa-skype"></i></div>

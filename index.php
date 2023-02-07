@@ -28,7 +28,7 @@ session_start();
 <body>
     <div class="container">
         <header>
-            <div>
+            <!-- <div>
             <h1 class="logo-nav"><a href="#">Kucra</a></h1>
             </div>
             <nav>
@@ -49,7 +49,27 @@ session_start();
                     <li><a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
                     <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
                 </ul>
-            </div>
+            </div> -->
+
+            <nav class="navbar">
+                <h1 class="logo-nav">Kucra</h1>
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">features</a></li>
+                    <li><a href="#">team</a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">blog</a></li>
+                    <li><a href="#">client</a></li>
+                    <li><a href="#">price</a></li>
+                    <li><a href="#">contact</a></li>
+                </ul>
+                <ul class="reseaux">
+                    <li><a href="https://fr-fr.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                </ul>
+                <i class="fas fa-bars fa-2x" id="burger"></i>
+            </nav>
 
         </header>
 
@@ -60,9 +80,11 @@ session_start();
                 <p>Carefully crafted after analysing the needs of <br>different industries and the design achieves a
                     <br> great balance between purpose & prensentation</p>
 
+                    <div class="form-flex">
                     <form action="save-email.php" method="post" id="form">
                     <input class="large-button" type="text" name="email" id="email" placeholder="Enter your Email">
                     <input class="small-button" type="submit" value="SUBSCRIBE">
+                    </div>
                     
                     <!-- Verification -->
                     <?php if (isset($_POST['submit'])) {
@@ -398,6 +420,14 @@ session_start();
   topBtn.click(function() {
     $("html, body").animate({ scrollTop: 0 }, 2000);
   });
+
+
+  const burger = document.getElementById('burger');
+const navLinks = document.querySelector('.nav-links');
+
+burger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+})
 </script>
 
     <!-- ************************************ METHODE SANS JQUERY **************************************** -->

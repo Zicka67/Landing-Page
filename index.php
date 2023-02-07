@@ -392,7 +392,7 @@ session_start();
                     </a></div>
             </div>
             <div class="footer-copyright">
-                <button id="scrollTop">Haut de page</button>
+                <button id="scrollTop"><i class="fa-solid fa-arrow-up"></i></button>
                 <p>2022 © Kucra - Landing Page Template by Pichforest</p>
 
             </div>

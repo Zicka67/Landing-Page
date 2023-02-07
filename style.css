@@ -640,7 +640,7 @@ margin-bottom: 20px;
 /* ********************************************** */
 
 .card-container {
-    width: 1000px;
+    width: 100vw;
     display: flex;
     justify-content: space-around;
     color: rgb(45, 45, 45);

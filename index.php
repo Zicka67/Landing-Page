@@ -288,7 +288,7 @@ session_start();
                     </div>
                 </div>
                 <div class="price-button">
-                    <input type="button" value="Learn More"></input>
+                    <input class="learn" type="button" value="Learn More"></input>
                 </div>
             </div>
             <div class="pricing-container-right">
@@ -452,7 +452,7 @@ const themes = {
 
 document.documentElement.style.setProperty('--container-background', themes.blue['--container-background']);
 
-[...document.querySelectorAll('.color-button, .large-button, .small-button, .square, .fa-solid')].forEach(el => {
+[...document.querySelectorAll('.color-button, .large-button, .small-button, .square, .fa-solid, .learn')].forEach(el => {
     el.addEventListener('click', () => {
         const theme = themes[el.dataset.theme];
         for (var variable in theme) {

@@ -390,20 +390,20 @@ form input:last-child:hover {
 
 .container-icon:hover .mini-icon:nth-child(1) {
     top: 30px;
-    left: 30px;
-    transform: translate(0, 50px);
+    left: 10px;
+    transform: translate(0, 20px);
 }
 
 .container-icon:hover .mini-icon:nth-child(2) {
     top: 30px;
-    left: 30px;
-    transform: translate(0, 80px);
+    left: 10px;
+    transform: translate(0, 50px);
 }
 
 .container-icon:hover .mini-icon:nth-child(3) {
     top: 30px;
-    left: 30px;
-    transform: translate(0, 110px);
+    left: 10px;
+    transform: translate(0, 80px);
 }
 
 

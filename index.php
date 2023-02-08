@@ -281,7 +281,7 @@ session_start();
                             <i class="fa-regular fa-user"></i>
                             Ruben Reed
                         </p>
-                        <p class="DateBlog">
+                        <p class="dateBlog">
                             <i class="fa-regular fa-clock"></i>
                             1st July 2021
                         </p>
@@ -305,7 +305,7 @@ session_start();
                             <i class="fa-regular fa-user"></i>
                             Theresa Sinclair
                         </p>
-                        <p class="DateBlog">
+                        <p class="dateBlog">
                             <i class="fa-regular fa-clock"></i>
                             25th July 2021
                         </p>

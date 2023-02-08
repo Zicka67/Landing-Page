@@ -239,41 +239,87 @@ session_start();
 
     </Section>
 
-    <section id="blog" class="blog">
-
-        <div class="blog-container blog1">
-            <div class="blog-square">
-                <h3><i></i>Calvin Carlo</h3>
-                <p><i></i>20th March 2021</p>
-                <img src="Landing-page\img\blog3.png" alt="">
-            </div>
-            <h3>Doing a cross country road trip</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti optio quis nobis.</p>
-            <a href="">Read more</a>
+    <section class="partie" id="blog">
+        <div class="titre">
+            <h2>Our Blog</h2>
+            <p>
+                It is a long established fact that a reader will be of a page when established fact looking as it's layout.
+            </p>
         </div>
-
-        <div class="blog-container blog2">
-            <div class="blog-square">
-                <h3><i></i>Calvin Carlo</h3>
-                <p><i></i>20th March 2021</p>
-                <img src="Landing-page\img\blog2.png" alt="">
-            </div>
-            <h3>Nex exhibition at our Museum</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti optio quis nobis.</p>
-            <a href="">Read more</a>
+        <div id="blog-container">
+            <article class="cardBlog">
+                <div class="mainImg">
+                    <div class="marginBlogImg">
+                        <img src="Landing-page\img\blog1.png" alt="">
+                    </div>
+                    <div class="namePhoto">
+                        <p class="bold">
+                            <i class="fa-regular fa-user"></i>
+                            Calvin Carlo
+                        </p>
+                        <p class="dateBlog">
+                            <i class="fa-regular fa-clock"></i>
+                            20th March 2021
+                        </p>
+                    </div>
+                </div>
+                <div class="title-blog">
+                    <h3>Doing a cross country road trip</h3>
+                    <p class="paraBlog">
+                        We credit digital, graphic and dimensional thinking, to create category leading brand.
+                    </p>
+                    <a href="#">Read More</a>
+                </div>
+            </article>
+            <article class="cardBlog">
+                <div class="mainImg">
+                    <div class="marginBlogImg">
+                        <img src="Landing-page\img\blog2.png" alt="">
+                    </div>
+                    <div class="namePhoto">
+                        <p class="bold">
+                            <i class="fa-regular fa-user"></i>
+                            Ruben Reed
+                        </p>
+                        <p class="DateBlog">
+                            <i class="fa-regular fa-clock"></i>
+                            1st July 2021
+                        </p>
+                    </div>
+                </div>
+                <div class="title-blog">
+                    <h3>New exhibition at our Museum</h3>
+                    <p class="paraBlog">
+                        Even the all-powerful Pointing has no control about the blind almost unorthographic.
+                    </p>
+                    <a href="#">Read More</a>
+                </div>
+            </article>
+            <article class="cardBlog">
+                <div class="mainImg">
+                    <div class="marginBlogImg">
+                        <img src="Landing-page\img\blog3.png" alt="">
+                    </div>
+                    <div class="namePhoto">
+                        <p class="bold">
+                            <i class="fa-regular fa-user"></i>
+                            Theresa Sinclair
+                        </p>
+                        <p class="DateBlog">
+                            <i class="fa-regular fa-clock"></i>
+                            25th July 2021
+                        </p>
+                    </div>
+                </div>
+                <div class="title-blog">
+                    <h3>Design your apps in your own way</h3>
+                    <p class="paraBlog">
+                        Pityful a rethoric question ran over her cheek, then she continued her way.
+                    </p>
+                    <a href="#">Read More</a>
+                </div>
+            </article>
         </div>
-
-        <div class="blog-container blog3">
-            <div class="blog-square">
-                <h3><i></i>Calvin Carlo</h3>
-                <p><i></i>20th March 2021</p>
-                <img src="Landing-page\img\blog1.png" alt="">
-            </div>
-            <h3>Design your apps in your way</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti optio quis nobis.</p>
-            <a href="">Read more</a>
-        </div>
-
     </section>
 
     <section id="about" class="pricing">

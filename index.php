@@ -19,7 +19,9 @@ session_start();
         rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="responsive-tab.css">
+    <!-- <link rel="stylesheet" href="responsive-tab.css">
+    <link rel="stylesheet" href="responsive-tel.css">  -->
+
 
     <title>Landing-page</title>
 
@@ -28,28 +30,6 @@ session_start();
 <body>
     <div class="container">
         <header>
-            <!-- <div>
-            <h1 class="logo-nav"><a href="#">Kucra</a></h1>
-            </div>
-            <nav>
-                <ul>    
-                    <li><a href="">Home</a></li>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#team">Client</a></li>
-                    <li><a href="#blog">Blog</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#price">Pricing</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-
-            <div>
-                <ul class="reseaux">
-                    <li><a href="https://fr-fr.facebook.com/" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
-                    <li><a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
-                    <li><a href="https://www.instagram.com/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
-                </ul>
-            </div> -->
 
             <nav class="navbar">
                 
@@ -246,7 +226,7 @@ session_start();
                 It is a long established fact that a reader will be of a page when established fact looking as it's layout.
             </p>
         </div>
-        <div id="blog-container">
+        <div id="blog-container" class="blog-container" style="display:flex">
             <article class="cardBlog">
                 <div class="mainImg">
                     <div class="marginBlogImg">
@@ -363,15 +343,22 @@ session_start();
 
             $store = findAll();
             foreach ($store as $product) {
+                $promoClass = ($product['sale'] == 'yes') ? 'promo' : '';  // Pour check si le $product a la promo ( yes ) ou pas
+                // var_dump($promoClass);
             ?>
-            
-                    <!-- //promo a mettre a nouveau .. -->
-            <div class="card">
+                <div class="card">
+                    <div class="<?= $promoClass ?>">
+                    <!-- //Affiche le 20% uniquement sur la card qui a la promo -->
+                    <p><?php if ($product['sale'] == 'yes') { echo '20%'; } ?></p>
+                    </div>
                 <h3><?= ucFirst($product['name']); ?></h3>   <!-- <?= ucFirst($product['name']); ?> = echo, ici affiche le name du product -->
+                
+                <!-- //Ajout de la couleur rouge pour le prix si la card est en promo -->
                 <div class="flex-dollars">
-                    <i class="fa-regular fa-dollar-sign" style="margin-top: 20px;"></i>
-                    <p><span><?= ucFirst($product['price']); ?></span>/month</p>
+                    <i class="fa-regular fa-dollar-sign <?php if ($product['sale'] == 'yes') { echo 'sale'; } ?>" style="margin-top: 20px;"></i>
+                    <p><span class="<?php if ($product['sale'] == 'yes') { echo 'sale'; } ?>"><?= ucFirst($product['price']); ?></span>/month</p>
                 </div>
+
                 <div class="flex-capacity">
                 <div class="flex">
             <h3><i class="fa-regular fa-circle-check green"></i> Bandwidth: </h3>

@@ -365,9 +365,9 @@ foreach ($store as $product) {
         $saleClass = ($product['sale'] > 0) ? 'sale' : ''; //$product sale > 0 ? alors on ajoute class=sale SINON class=''
         if ($product['sale'] > 0) {
             $price = $price * (1 - $product['sale'] / 100); //si sale > 0 on modifie le prix en fonction de la promo
-            echo '<span class="' . $saleClass . '">' . ucFirst($price) . '</span>';
+            echo '<span class="' . $saleClass . '">' . ucFirst(round($price, 0)) . '</span>';  // Affiche le prix arrondit avec round(la var prix, le nbr de decimal)
         } else {
-            echo '<span class="' . $saleClass . '">' . ucFirst($price) . '</span>';
+            echo '<span class="' . $saleClass . '">' . ucFirst(round($price, 0)) . '</span>';
         }
         ?>
         
@@ -422,11 +422,12 @@ foreach ($store as $product) {
         </div>
         </div>
         <div class="price-button2">
-        <a href="admin.php" target="_blank"><input type="button" value="Join Now"></input></a>
+        <a href="#" target="_blank"><input type="button" value="Join Now"></input></a>
         </div>
         </div>
         <?php } ?>
         </div>
+        <a href="admin.php" class="buttonAdmin" target="_blank">Admin</a>
         </section>
         <div id=color>
         
@@ -498,24 +499,30 @@ foreach ($store as $product) {
         
         // ******* SWAP COLOR ******
         
+        //On définit les const couleurs 
         const themes = {
             blue: {
                 '--container-background': 'radial-gradient(rgb(139, 195, 245), #1294b8)'
-                
             },
             red: {
                 '--container-background': 'radial-gradient(rgb(246, 106, 106), #ed1f1f)'
             },
         };
         
-        document.documentElement.style.setProperty('--container-background', themes.blue['--container-background']);
+        // Obtenir la couleur sélectionnée dans le stockage local (pour qu'elle reste même après le chargement de page)
+        const selectedTheme = localStorage.getItem('selectedTheme') || 'blue';
         
-        [...document.querySelectorAll('.color-button, .large-button, .small-button, .square, .fa-solid, .learn')].forEach(el => {
-            el.addEventListener('click', () => {
-                const theme = themes[el.dataset.theme];
+        // Applique le css container-background en utilsant la couleur dans la const selectedTheme
+        document.documentElement.style.setProperty('--container-background', themes[selectedTheme]['--container-background']);
+        
+        [...document.querySelectorAll('.color-button, .large-button, .small-button, .square, .fa-solid, .learn')].forEach(element => {
+            element.addEventListener('click', () => {
+                const theme = themes[element.dataset.theme];
                 for (var variable in theme) {
                     document.documentElement.style.setProperty(variable, theme[variable]);
                 };
+                // Stock la couleur sélectionnée dans le stockage local
+                localStorage.setItem('selectedTheme', element.dataset.theme);
             });
         });
         

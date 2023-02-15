@@ -11,13 +11,16 @@ session_start();
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<link rel="stylesheet" href="styleAdmin.css">
+
+
 <title>Upgrade</title>
 
 </head>
 
 <body>
   <div class="container" style="display: flex;">
-    <h1>Update pricing</h1>
+    <!-- <h1>Update pricing</h1> -->
     <?php
     // Connection à la DB
     require_once('db-functions.php');
@@ -50,7 +53,7 @@ session_start();
         <p>Hidden Fees: <input type="text" name="fees" value="<?php echo $product['fees']; ?>"></p>
       </div>
     </div>
-    <input type="submit" value="Update" style="position: absolute">
+    <input class="myButton" type="submit" value="Update">
 </form>
   <?php } ?>
 

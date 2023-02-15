@@ -343,20 +343,20 @@ session_start();
 
             $store = findAll();
             foreach ($store as $product) {
-                $promoClass = ($product['sale'] == 'yes') ? 'promo' : '';  // Pour check si le $product a la promo ( yes ) ou pas
+                $promoClass = ($product['sale'] != '0') ? 'promo' : '';  // Pour check si le $product a la promo ( yes ) ou pas
                 // var_dump($promoClass);
             ?>
                 <div class="card">
                     <div class="<?= $promoClass ?>">
                     <!-- //Affiche le 20% uniquement sur la card qui a la promo -->
-                    <p><?php if ($product['sale'] == 'yes') { echo '20%'; } ?></p>
+                    <p><?php if ($product['sale'] != '0') { echo $product['sale']; } ?></p>
                     </div>
                 <h3><?= ucFirst($product['name']); ?></h3>   <!-- <?= ucFirst($product['name']); ?> = echo, ici affiche le name du product -->
                 
                 <!-- //Ajout de la couleur rouge pour le prix si la card est en promo -->
                 <div class="flex-dollars">
-                    <i class="fa-regular fa-dollar-sign <?php if ($product['sale'] == 'yes') { echo 'sale'; } ?>" style="margin-top: 20px;"></i>
-                    <p><span class="<?php if ($product['sale'] == 'yes') { echo 'sale'; } ?>"><?= ucFirst($product['price']); ?></span>/month</p>
+                    <i class="fa-regular fa-dollar-sign <?php if ($product['sale'] != '0') { echo 'sale'; } ?>" style="margin-top: 20px;"></i>
+                    <p><span class="<?php if ($product['sale'] != '0') { echo 'sale'; } ?>"><?= ucFirst($product['price']); ?></span>/month</p>
                 </div>
 
                 <div class="flex-capacity">

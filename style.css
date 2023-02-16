@@ -8,6 +8,11 @@
     font-family: 'Poppins', sans-serif;
 }
 
+:root {
+    --container-background: radial-gradient(rgb(139, 195, 245), #1294b8);
+    --button-background: #1294b8;
+}
+
 body {
     line-height: 1;
 }
@@ -38,9 +43,7 @@ table {
 /* ****************************************  CONTAINER  ************************************************ */
 
 .container {
-    /* background: radial-gradient(rgb(246, 106, 106), #ed1f1f); */
     background: var(--container-background);
-
 }
 
 /* ****************************************  HEADER  ************************************************ */
@@ -186,7 +189,7 @@ nav ul {
 } */
 
 #form {
-    margin-left: -0.5vw;
+    /* margin-left: -0.5vw; */
 }
 
 .large-button {
@@ -209,7 +212,7 @@ nav ul {
     /* Enlever les bordure au clic */
     outline: none;
     transition: 0.5s;
-
+    background-color: var(--button-background);
 }
 
 .main-section form input:last-child {
@@ -222,8 +225,7 @@ nav ul {
 
 form input:last-child {
     height: 40px;
-    /* background-color: rgba(18,148,184,1); */
-    background: var(--container-background);
+    background: var(--button-background);
     position: relative;
     bottom: 45px;
     left: 29.2%;
@@ -327,6 +329,10 @@ form input:last-child:hover {
 
 .team-margin {
     overflow: hidden;
+}
+
+.team-margin h3 {
+    font-size: 1rem;
 }
 
 .resize-img:hover {
@@ -479,7 +485,6 @@ form input:last-child:hover {
 .parallax-text a {
     text-decoration: none;
 
-
 }
 
 .parallax-text h1 {
@@ -490,6 +495,19 @@ form input:last-child:hover {
 .parallax-text h3 {
     font-size: 18px;
     color: rgba(255, 255, 255, 0.51);
+}
+
+.parallax-text input {
+    transition: 0.5s;
+}
+
+.parallax-text input:hover {
+    background-color: white;
+}
+
+.parallax-text :hover {
+    color: grey;
+    transition: 0.5s;
 }
 
 .background {
@@ -578,8 +596,6 @@ form input:last-child:hover {
     flex-direction: column;
     gap: 2vh;
     position: relative;
-    flex-basis: 33%;
-    max-width: 24%;
 }
 
 .title-blog {
@@ -593,17 +609,23 @@ form input:last-child:hover {
     color: white;
 }
 
-.title-blog > h3 {
-    font-size: 23px;
+.title-blog h3 {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.title-blog p {
+    text-align: center;
 }
 
 .paraBlog {
     width: 20vw;
     color: gray;
-    font-size: 16px;
+    font-size: 1rem;
+    width: 80vw;
 }
 
-.title-blog > a {
+.title-blog a {
     text-decoration: none;
     color: rgb(139, 195, 245);
     font-size: 18px;
@@ -615,13 +637,11 @@ form input:last-child:hover {
     top: 0px;
     left: 0px;
     border-radius: 10px;
-    padding: 6px 7px;
-    width: 443px;
     height: 332px;
     transition: all 0.5s;
 }
 
-.namePhoto p{
+.namePhoto p {
     margin-top: 30px;
 }
 
@@ -634,7 +654,7 @@ form input:last-child:hover {
     width: 100%;
 }
 
-.marginBlogImg > img {
+.marginBlogImg>img {
     display: block;
     object-fit: cover;
     width: 100%;
@@ -716,7 +736,7 @@ form input:last-child:hover {
     font-weight: 600;
     font-size: 15px;
     /* background-color: #1294b8; */
-    background: var(--container-background);
+    background: var(--button-background);
 }
 
 .price-button input:hover {
@@ -834,8 +854,7 @@ span {
     margin: 20px auto;
     font-weight: 600;
     font-size: 15px;
-    /* background-color: #1294b8; */
-    background: var(--container-background);
+    background-color: var(--button-background);
     width: 85%;
     height: 40px;
 }
@@ -845,7 +864,7 @@ span {
 }
 
 .promo {
-    float: right; 
+    float: right;
     width: 50px;
     height: 50px;
     clip-path: inset(5% 15% 15% 10% round 5% 20% 0 10%);
@@ -943,11 +962,11 @@ input:hover {
     position: fixed;
     bottom: 5vw;
     right: 5vh;
-    /* background-color: rgba(18,148,184,1); */
-    background: var(--container-background);
+    background: var(--button-background);
+    opacity: 50%;
     border-radius: 100px;
     color: white;
-    padding: 12px 20px;
+    padding: 1vh 1vw;
     border: none;
     cursor: pointer;
     font-size: 3vh;
@@ -1023,27 +1042,28 @@ h4 {
 /* ************************  */
 
 .buttonAdmin {
-	box-shadow:inset 0px 1px 0px 0px #ffffff;
-	background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
-	background-color:#ffffff;
-	border-radius:6px;
-	border:1px solid #dcdcdc;
-	display:inline-block;
-	cursor:pointer;
-	color:#666666;
-	font-family:Arial;
-	font-size:15px;
-	font-weight:bold;
-	padding:6px 24px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #ffffff;
-}
-.buttonAdmin:hover {
-	background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
-	background-color:#f6f6f6;
-}
-.buttonAdmin:active {
-	position:relative;
-	top:1px;
+    box-shadow: inset 0px 1px 0px 0px #ffffff;
+    background: linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+    background-color: #ffffff;
+    border-radius: 6px;
+    border: 1px solid #dcdcdc;
+    display: inline-block;
+    cursor: pointer;
+    color: #666666;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+    text-shadow: 0px 1px 0px #ffffff;
 }
 
+.buttonAdmin:hover {
+    background: linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+    background-color: #f6f6f6;
+}
+
+.buttonAdmin:active {
+    position: relative;
+    top: 1px;
+}

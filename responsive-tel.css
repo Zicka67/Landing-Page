@@ -31,6 +31,11 @@
       border-spacing: 0;
     }
 
+    :root {
+      --container-background: radial-gradient(rgb(139, 195, 245), #1294b8);
+      --button-background: #1294b8;
+  }
+
     /* ****************************************  HEADER  ************************************************ */
 
 
@@ -44,7 +49,7 @@
       border-radius: 45px;
       border: none;
       opacity: 0.7;
-
+      padding-left: 10px;
       outline: none;
       transition: 0.5s;
       margin-left: 60px;
@@ -60,8 +65,7 @@
       outline: none;
       transition: 0.5s;
       font-size: 9px;
-      margin-top: 1px;
-
+      background-color: var(--button-background);
     }
 
     .namePhoto {
@@ -176,7 +180,7 @@
     #burger {
       margin-right: 5vw;
       opacity: 100%;
-      color: #b60606;
+      color: #ffffff;
       cursor: pointer;
     }
 
@@ -271,8 +275,8 @@
       height: 40px;
       background-color: rgba(18, 148, 184, 1);
       position: relative;
-      bottom: 45px;
-      left: 29.2%;
+      bottom: 44px;
+      left: 30%;
       color: white;
       padding-left: 0;
       /* Comment bouger la barre d'écriture dans le champ ? */
@@ -358,7 +362,7 @@
     }
 
     .square {
-      background: radial-gradient(rgb(139, 195, 245), #1294b8);
+      background: var(--container-background);
       width: 300x;
       height: 300px;
       text-align: center;
@@ -660,29 +664,27 @@
   /* ****************************************  PRICE  ************************************************ */
 
   #about {
-    margin-top: 100px;
+    margin-top: 0;
   }
 
   .price-flex {
     display: flex;
+    flex-direction: column-reverse;
     width: 80%;
     margin: 0 auto;
   }
 
   .pricing-container-right {
     background-image: url('Landing-page/img/creativity-resize.png');
-    width: 65%;
-    margin-top: 40px;
+    max-width: 100%;
+    height: 60vh;
+    margin: 0 auto;
   }
 
-  .pricing-container-right img {
-    width: 50%;
-
-  }
 
   .pricing-container-left {
-    width: 40%;
-    height: 650px;
+    width: 80vw;
+    height: 60vh;
     margin: 0 0 0 0;
 
   }
@@ -702,6 +704,10 @@
   .price-center {
     text-align: center;
     margin-bottom: 150px;
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    margin: 0 auto;
   }
 
   .price-center h3 {
@@ -711,16 +717,27 @@
   }
 
   .price-center p {
-    font-size: 25px;
     color: rgb(45, 45, 45, 0.487);
-    font-size: 18px;
-    line-height: 30px;
+    font-size: 1rem;
+    margin-bottom: 10vh;
   }
 
   .flex-number {
     display: flex;
     text-align: left;
-    margin-top: 50px;
+    margin-top: 5vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .price-button {
+    margin: 0 auto;
+    width: 130px;
+  } 
+  
+  .flex-number div:nth-child(2n) {
+    margin-left: 50px;
   }
 
   .flex-number div:nth-child(2n) {
@@ -753,10 +770,13 @@
 
   .card-container {
     display: flex;
+    flex-direction: column;
     color: rgb(45, 45, 45);
     margin-left: -45px;
     align-items: center;
     justify-content: center;
+    width: 80%;
+    margin: 0 auto;
   }
 
   .card-container h3 {
@@ -775,16 +795,17 @@
   }
 
   .card {
-    width: 25vw;
-    height: 370px;
+    width: 80vw;
+    height: 60vh;
     border-radius: 10px;
     -webkit-box-shadow: 0px 14px 17px -6px rgba(8, 155, 190, 0.36);
     box-shadow: 0px 14px 17px -6px rgba(8, 155, 190, 0.36);
     text-align: center;
+    margin-bottom: 10vh;
   }
 
   .card:nth-of-type(2) {
-    margin: -25px 20px 0 20px;
+    margin-bottom: 10vh;
   }
 
   .card h3 {
@@ -863,12 +884,12 @@
       clip-path: inset(5% 15% 15% 10% round 5% 20% 0 10%);
       background-color: rgb(2, 109, 171);
       margin-right: -8px;
-    }
+    } */
     
     .promo p {
       color: white;
-      line-height: 10px;
-    } */
+      /* line-height: 10px; */
+    } 
 
   .price-button2 .qtt {
     width: 85%;
@@ -891,8 +912,7 @@
   /* ****************************************  FOOTER  ************************************************ */
 
   .footer {
-    height: 230px;
-    margin-top: 150px;
+    height: 15%;
   }
 
   .footer p {
@@ -916,6 +936,7 @@
     width: 20px;
     height: 20px;
     text-align: center;
+    margin: 0 10px;
   }
 
   .footer-text {
@@ -955,9 +976,9 @@
     bottom: 2vh;
     right: 6vw;
     background-color: rgba(18, 148, 184, 1);
-    border-radius: 5px;
+    border-radius: 50%;
     color: white;
-    padding: 10px 20px;
+    padding: 5px 12px;
     border: none;
     cursor: pointer;
   }

@@ -63,9 +63,6 @@
 
 /* Tablette */
 @media only screen and (max-width: 960px) {
-body {
-  /* width: 960px; */
-}
 
 .container {
     height: 100vw;
@@ -243,7 +240,7 @@ header ul {
   transition: 0.s;
 }
 
-form input:last-child {
+/* form input:last-child {
   height: 40px;
   background-color: rgba(18,148,184,1);
   position: relative;
@@ -252,7 +249,7 @@ form input:last-child {
   color: white;
   padding-left: 0;
   /* Comment bouger la barre d'écriture dans le champ ? */
-}
+} */
 form input:last-child:hover {
   opacity: 0.5;
 }
@@ -510,8 +507,8 @@ margin-bottom: 20px;
 
 .background {
   background-image: url('Landing-page/img/parallax.png');
-  width: 50vw; a corriger
-  min-height: 50vh; a corriger
+  width: 50vw; 
+  min-height: 50vh; 
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -617,28 +614,8 @@ margin-bottom: 20px;
   margin-top: 100px;
 }
 
-.price-flex {
-  display: flex;
-  width: 80%;
-  margin: 0 auto;
-}
-
-.pricing-container-right {
-  background-image: url('Landing-page/img/creativity-resize.png');
-  width: 65%;
-  margin-top: 40px;
-}
-
-.pricing-container-right img {
-  width: 50%;
-
-}
-
-.pricing-container-left {
-  width: 40%;
-  height: 650px;
-  margin: 0 0 0 0;
-  
+#price {
+  margin-top: 40vh;
 }
 
 .pricing-container-left h3 {
@@ -655,7 +632,7 @@ margin-bottom: 20px;
 
 .price-center {
   text-align: center;
-  margin-bottom: 150px;
+  margin-bottom: 10vh;
 }
 
 .price-center h3 {
@@ -669,16 +646,6 @@ margin-bottom: 20px;
   color: rgb(45, 45, 45, 0.487);
   font-size: 18px;
   line-height: 30px;
-}
-
-.flex-number {
-  display: flex;
-  text-align: left;
-  margin-top: 50px;
-}
-
-.flex-number div:nth-child(2n) {
-  margin-left: 50px;
 }
 
 .price-button input {
@@ -917,6 +884,6 @@ input:hover {
 
 
 
-}
+
   
   

@@ -358,7 +358,7 @@ session_start();
                         <?php if ($product['sale'] > 0) { ?>
                             <!-- On utilise une condition pour afficher le % de réduction uniquement si la promo est disponible. On utilise la balise <?php ?> pour passer en PHP.-->
                             <p>
-                                <?= $product['sale'] ?>%
+                                <?= $product['sale'] ?> %
                             </p>
                         <?php } ?>
                     </div>

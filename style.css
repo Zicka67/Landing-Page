@@ -219,7 +219,7 @@ nav ul {
     transition: 0.s;
 }
 
-form input:last-child {
+ form input:last-child {
     height: 40px;
     background: var(--button-background);
     position: relative;
@@ -227,8 +227,7 @@ form input:last-child {
     left: 29.2%;
     color: white;
     padding-left: 0;
-    /* Comment bouger la barre d'écriture dans le champ ? */
-}
+} 
 
 form input:last-child:hover {
     opacity: 0.5;
@@ -618,7 +617,14 @@ form input:last-child:hover {
     width: 20vw;
     color: gray;
     font-size: 1rem;
-    width: 80vw;
+    width: 60vw;
+    margin: 0 auto;
+}
+
+.title-blog a{ 
+  display: flex;
+  justify-content: space-around;
+
 }
 
 .title-blog a {
@@ -661,7 +667,7 @@ form input:last-child:hover {
 
 .price-flex {
     display: flex;
-
+    flex-direction: column-reverse;
 }
 
 .pricing-container-right {
@@ -864,12 +870,12 @@ span {
     width: 50px;
     height: 50px;
     clip-path: inset(5% 15% 15% 10% round 5% 20% 0 10%);
-    background-color: rgb(198, 38, 38);
+    background-color: rgb(59, 156, 7);
     margin-right: -8px;
 }
 
 .sale {
-    color: rgb(198, 38, 38);
+    color: rgb(59, 156, 7);
 }
 
 .promo p {

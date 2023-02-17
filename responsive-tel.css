@@ -273,7 +273,7 @@
 
     form input:last-child {
       height: 40px;
-      background-color: rgba(18, 148, 184, 1);
+      background-color: var(--button-background);
       position: relative;
       bottom: 44px;
       left: 30%;
@@ -477,8 +477,8 @@
   }
 
   .container-icon img {
-    width: 35vw;
-    height: 20vh;
+    width: 150px;
+    height: 150px;
     align-items: center;
     margin: 0 auto;
   }
@@ -488,13 +488,49 @@
   }
 
   .mini-icon {
-    /* border-radius: 100%; */
+    display: none;
+    position: absolute;
+    z-index: 3;
     width: 2vw;
-    height: 2vh;
-    position: relative;
-    bottom: 18vh;
+    height: 1.3vh;
+    font-size: 0.75rem;
+    color: black;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
+    top: -30px;
+    left: -30px;
+}
 
-  }
+.container-icon:hover .mini-icon {
+    display: flex;
+    flex-wrap: wrap;
+    transition: all 0.5s;
+}
+
+.container-icon:hover .mini-icon:nth-child(1) {
+    top: 10px;
+    left: 10px;
+    width: 1.75vw;
+    transform: translate(0, 0px);
+}
+
+.container-icon:hover .mini-icon:nth-child(2) {
+    top: 10px;
+    left: 10px;
+    transform: translate(0, 25px);
+}
+
+.container-icon:hover .mini-icon:nth-child(3) {
+    top: 10px;
+    left: 10px;
+    transform: translate(0, 50px);
+}
+
+  
 
   .mini-icon:hover {
     cursor: pointer;
@@ -640,7 +676,7 @@
 
   .blog-container a {
     text-decoration: none;
-    color: rgb(0, 137, 164);
+    color: var(--button-background);
     margin-top: 15px;
   }
 
@@ -755,7 +791,7 @@
     margin-left: -2px;
     font-weight: 600;
     font-size: 15px;
-    background-color: #1294b8;
+    background-color: var(--button-background);
   }
 
   .price-button input:hover {
@@ -795,8 +831,8 @@
   }
 
   .card {
-    width: 80vw;
-    height: 60vh;
+    width: 80%;
+    height: 400px;
     border-radius: 10px;
     -webkit-box-shadow: 0px 14px 17px -6px rgba(8, 155, 190, 0.36);
     box-shadow: 0px 14px 17px -6px rgba(8, 155, 190, 0.36);
@@ -853,12 +889,12 @@
   }
 
   .fa-dollar-sign {
-    color: #1294b8;
+    color: var(--button-background);
 
   }
 
   span {
-    color: #1294b8;
+    color: var(--button-background);
     font-size: 40px;
   }
 
@@ -870,7 +906,7 @@
     margin: 10px auto;
     font-weight: 600;
     font-size: 15px;
-    background-color: #1294b8;
+    background-color: var(--button-background);
   }
 
   .price-button2 a {
@@ -975,7 +1011,7 @@
     position: fixed;
     bottom: 2vh;
     right: 6vw;
-    background-color: rgba(18, 148, 184, 1);
+    background-color: var(--button-background);
     border-radius: 50%;
     color: white;
     padding: 5px 12px;
